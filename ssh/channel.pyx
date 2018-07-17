@@ -26,7 +26,6 @@ cimport c_ssh
 cdef class Channel:
 
     def __cinit__(self, Session session):
-        self.session = session
         self.closed = False
 
     def __dealloc__(self):
@@ -38,8 +37,9 @@ cdef class Channel:
 
     @staticmethod
     cdef Channel from_ptr(c_ssh.ssh_channel _chan, Session session):
-        cdef Channel chan = Channel.__new__(Channel, session)
+        cdef Channel chan = Channel.__new__(Channel)
         chan._channel = _chan
+        chan.session = session
         return chan
 
     def close(self):
