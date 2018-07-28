@@ -25,7 +25,7 @@ cimport c_ssh
 
 cdef class Channel:
 
-    def __cinit__(self, Session session):
+    def __cinit__(self):
         self.closed = False
 
     def __dealloc__(self):
@@ -311,3 +311,7 @@ cdef class Channel:
         with nogil:
             size = c_ssh.ssh_channel_window_size(self._channel)
         return size
+
+    def select(self, channels not None, outchannels not None, maxfd,
+               readfds, timeout=None):
+        raise NotImplementedError

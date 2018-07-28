@@ -81,7 +81,7 @@ class SFTPTest(SSHTestCase):
             self.assertIsNotNone(attrs.owner)
             self.assertIsNotNone(attrs.group)
             self.assertTrue(attrs.size > 0)
-            self.assertEqual(attrs.name, b'.')
+            self.assertTrue(isinstance(attrs.name, bytes))
             self.assertTrue(len(attrs.longname) > 1)
             self.assertFalse(_dir.closed)
             self.assertEqual(_dir.closedir(), 0)
