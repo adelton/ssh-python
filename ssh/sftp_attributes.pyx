@@ -25,8 +25,7 @@ from c_ssh cimport ssh_string, uint8_t, uint32_t, uint64_t
 
 cdef class SFTPAttributes:
 
-    def __cinit__(self, SFTP sftp):
-        self.sftp = sftp
+    def __cinit__(self):
         self.self_made = False
 
     def __dealloc__(self):
@@ -39,9 +38,9 @@ cdef class SFTPAttributes:
 
     @staticmethod
     cdef SFTPAttributes from_ptr(c_sftp.sftp_attributes attrs, SFTP sftp):
-        cdef SFTPAttributes _attrs = SFTPAttributes.__new__(
-            SFTPAttributes, sftp)
+        cdef SFTPAttributes _attrs = SFTPAttributes.__new__(SFTPAttributes)
         _attrs._attrs = attrs
+        _attrs.sftp = sftp
         return _attrs
 
     @staticmethod

@@ -37,14 +37,6 @@ cdef class Event:
             self._event = NULL
 
     @property
-    def session(self):
-        return self.session
-
-    @property
-    def connector(self):
-        return self.connector
-
-    @property
     def socket(self):
         return self._sock
 

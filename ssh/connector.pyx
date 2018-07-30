@@ -32,7 +32,7 @@ cdef class Flag:
         _flag._flag = flag
         return _flag
 
-    def __eq__(self, Flag other):
+    def __eq__(self, Flag other not None):
         return self._flag == other._flag
 
     def __str__(self):

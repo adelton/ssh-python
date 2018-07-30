@@ -620,7 +620,7 @@ cdef class Session:
         return rc
 
     def scp_new(self, int mode, location not None):
-        """Make new and initialise SCP channel"""
+        """Create and initialise SCP channel"""
         cdef c_ssh.ssh_scp _scp
         cdef bytes b_location = to_bytes(location)
         cdef char *c_location = b_location

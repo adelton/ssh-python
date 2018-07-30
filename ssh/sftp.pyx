@@ -31,12 +31,10 @@ cdef class SFTP:
 
     @staticmethod
     cdef SFTP from_ptr(c_sftp.sftp_session sftp, Session session):
-        cdef SFTP _sftp = SFTP.__new__(SFTP, session)
+        cdef SFTP _sftp = SFTP.__new__(SFTP)
         _sftp._sftp = sftp
+        _sftp.session = session
         return _sftp
-
-    def __cinit__(self, Session session):
-        self.session = session
 
     def __dealloc__(self):
         if self._sftp is not NULL:
