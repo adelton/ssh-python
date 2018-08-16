@@ -129,7 +129,7 @@ class SFTPTest(SSHTestCase):
         data = b"test file data"
         remote_filename = os.sep.join([os.path.dirname(__file__),
                                        "remote_test_file"])
-        mode = 0666
+        mode = 0666 if version_info <= (2,) else 0o666
         with sftp.open(remote_filename,
                        os.O_CREAT | os.O_WRONLY,
                        mode) as remote_fh:

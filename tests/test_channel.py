@@ -50,7 +50,7 @@ class ChannelTest(SSHTestCase):
         self.assertEqual(chan.request_exec(self.cmd), 0)
         self.assertFalse(chan.is_eof())
         self.assertFalse(chan.is_closed())
-        all_data = ""
+        all_data = b""
         size, data = chan.read()
         while size > 0:
             all_data += data
