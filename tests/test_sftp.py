@@ -279,7 +279,7 @@ class SFTPTest(SSHTestCase):
             self.assertEqual(lstat.size, os.lstat(symlink_target).st_size)
             realpath = sftp.canonicalize_path(symlink_target)
             self.assertTrue(realpath is not None)
-            self.assertEqual(realpath.encode('utf-8'), remote_filename)
+            self.assertEqual(realpath, remote_filename)
         except Exception:
             raise
         finally:
