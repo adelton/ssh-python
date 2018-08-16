@@ -1835,7 +1835,7 @@ static int __pyx_f_3ssh_5event_5Event_event_callback(CYTHON_UNUSED socket_t __py
  * 
  *     def add_fd(self, sock, short events, callback=None):             # <<<<<<<<<<<<<<
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(sock)
- *         cdef c_ssh.ssh_event_callback cb = <c_ssh.ssh_event_callback>&Event.event_callback
+ *         cdef c_ssh.ssh_event_callback cb = \
  */
 
 /* Python wrapper */
@@ -1932,23 +1932,23 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_4add_fd(struct __pyx_obj_3ssh_5even
  * 
  *     def add_fd(self, sock, short events, callback=None):
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(sock)             # <<<<<<<<<<<<<<
- *         cdef c_ssh.ssh_event_callback cb = <c_ssh.ssh_event_callback>&Event.event_callback
- *         cdef int rc
+ *         cdef c_ssh.ssh_event_callback cb = \
+ *             <c_ssh.ssh_event_callback>&Event.event_callback
  */
   __pyx_t_1 = PyObject_AsFileDescriptor(__pyx_v_sock); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 59, __pyx_L1_error)
   __pyx_v__sock = __pyx_t_1;
 
-  /* "ssh/event.pyx":60
- *     def add_fd(self, sock, short events, callback=None):
+  /* "ssh/event.pyx":61
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(sock)
- *         cdef c_ssh.ssh_event_callback cb = <c_ssh.ssh_event_callback>&Event.event_callback             # <<<<<<<<<<<<<<
+ *         cdef c_ssh.ssh_event_callback cb = \
+ *             <c_ssh.ssh_event_callback>&Event.event_callback             # <<<<<<<<<<<<<<
  *         cdef int rc
  *         cdef void *_cb = NULL if callback is None else <void *>callback
  */
   __pyx_v_cb = ((ssh_event_callback)(&__pyx_f_3ssh_5event_5Event_event_callback));
 
-  /* "ssh/event.pyx":62
- *         cdef c_ssh.ssh_event_callback cb = <c_ssh.ssh_event_callback>&Event.event_callback
+  /* "ssh/event.pyx":63
+ *             <c_ssh.ssh_event_callback>&Event.event_callback
  *         cdef int rc
  *         cdef void *_cb = NULL if callback is None else <void *>callback             # <<<<<<<<<<<<<<
  *         rc = c_ssh.ssh_event_add_fd(
@@ -1962,7 +1962,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_4add_fd(struct __pyx_obj_3ssh_5even
   }
   __pyx_v__cb = __pyx_t_2;
 
-  /* "ssh/event.pyx":63
+  /* "ssh/event.pyx":64
  *         cdef int rc
  *         cdef void *_cb = NULL if callback is None else <void *>callback
  *         rc = c_ssh.ssh_event_add_fd(             # <<<<<<<<<<<<<<
@@ -1971,7 +1971,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_4add_fd(struct __pyx_obj_3ssh_5even
  */
   __pyx_v_rc = ssh_event_add_fd(__pyx_v_self->_event, __pyx_v__sock, __pyx_v_events, __pyx_v_cb, __pyx_v__cb);
 
-  /* "ssh/event.pyx":65
+  /* "ssh/event.pyx":66
  *         rc = c_ssh.ssh_event_add_fd(
  *             self._event, _sock, events, cb, _cb)
  *         if rc == 0:             # <<<<<<<<<<<<<<
@@ -1981,7 +1981,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_4add_fd(struct __pyx_obj_3ssh_5even
   __pyx_t_3 = ((__pyx_v_rc == 0) != 0);
   if (__pyx_t_3) {
 
-    /* "ssh/event.pyx":66
+    /* "ssh/event.pyx":67
  *             self._event, _sock, events, cb, _cb)
  *         if rc == 0:
  *             self._sock = sock             # <<<<<<<<<<<<<<
@@ -1994,7 +1994,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_4add_fd(struct __pyx_obj_3ssh_5even
     __Pyx_DECREF(__pyx_v_self->_sock);
     __pyx_v_self->_sock = __pyx_v_sock;
 
-    /* "ssh/event.pyx":65
+    /* "ssh/event.pyx":66
  *         rc = c_ssh.ssh_event_add_fd(
  *             self._event, _sock, events, cb, _cb)
  *         if rc == 0:             # <<<<<<<<<<<<<<
@@ -2003,7 +2003,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_4add_fd(struct __pyx_obj_3ssh_5even
  */
   }
 
-  /* "ssh/event.pyx":67
+  /* "ssh/event.pyx":68
  *         if rc == 0:
  *             self._sock = sock
  *         return rc             # <<<<<<<<<<<<<<
@@ -2011,7 +2011,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_4add_fd(struct __pyx_obj_3ssh_5even
  *     def remove_fd(self, socket):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
@@ -2022,7 +2022,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_4add_fd(struct __pyx_obj_3ssh_5even
  * 
  *     def add_fd(self, sock, short events, callback=None):             # <<<<<<<<<<<<<<
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(sock)
- *         cdef c_ssh.ssh_event_callback cb = <c_ssh.ssh_event_callback>&Event.event_callback
+ *         cdef c_ssh.ssh_event_callback cb = \
  */
 
   /* function exit code */
@@ -2036,7 +2036,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_4add_fd(struct __pyx_obj_3ssh_5even
   return __pyx_r;
 }
 
-/* "ssh/event.pyx":69
+/* "ssh/event.pyx":70
  *         return rc
  * 
  *     def remove_fd(self, socket):             # <<<<<<<<<<<<<<
@@ -2068,17 +2068,17 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_6remove_fd(struct __pyx_obj_3ssh_5e
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("remove_fd", 0);
 
-  /* "ssh/event.pyx":70
+  /* "ssh/event.pyx":71
  * 
  *     def remove_fd(self, socket):
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)             # <<<<<<<<<<<<<<
  *         cdef int rc
  *         with nogil:
  */
-  __pyx_t_1 = PyObject_AsFileDescriptor(__pyx_v_socket); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_1 = PyObject_AsFileDescriptor(__pyx_v_socket); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 71, __pyx_L1_error)
   __pyx_v__sock = __pyx_t_1;
 
-  /* "ssh/event.pyx":72
+  /* "ssh/event.pyx":73
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2093,7 +2093,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_6remove_fd(struct __pyx_obj_3ssh_5e
       #endif
       /*try:*/ {
 
-        /* "ssh/event.pyx":73
+        /* "ssh/event.pyx":74
  *         cdef int rc
  *         with nogil:
  *             rc = c_ssh.ssh_event_remove_fd(self._event, _sock)             # <<<<<<<<<<<<<<
@@ -2103,7 +2103,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_6remove_fd(struct __pyx_obj_3ssh_5e
         __pyx_v_rc = ssh_event_remove_fd(__pyx_v_self->_event, __pyx_v__sock);
       }
 
-      /* "ssh/event.pyx":72
+      /* "ssh/event.pyx":73
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2122,7 +2122,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_6remove_fd(struct __pyx_obj_3ssh_5e
       }
   }
 
-  /* "ssh/event.pyx":74
+  /* "ssh/event.pyx":75
  *         with nogil:
  *             rc = c_ssh.ssh_event_remove_fd(self._event, _sock)
  *         if rc == 0:             # <<<<<<<<<<<<<<
@@ -2132,7 +2132,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_6remove_fd(struct __pyx_obj_3ssh_5e
   __pyx_t_2 = ((__pyx_v_rc == 0) != 0);
   if (__pyx_t_2) {
 
-    /* "ssh/event.pyx":75
+    /* "ssh/event.pyx":76
  *             rc = c_ssh.ssh_event_remove_fd(self._event, _sock)
  *         if rc == 0:
  *             self._sock = None             # <<<<<<<<<<<<<<
@@ -2145,7 +2145,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_6remove_fd(struct __pyx_obj_3ssh_5e
     __Pyx_DECREF(__pyx_v_self->_sock);
     __pyx_v_self->_sock = Py_None;
 
-    /* "ssh/event.pyx":74
+    /* "ssh/event.pyx":75
  *         with nogil:
  *             rc = c_ssh.ssh_event_remove_fd(self._event, _sock)
  *         if rc == 0:             # <<<<<<<<<<<<<<
@@ -2154,7 +2154,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_6remove_fd(struct __pyx_obj_3ssh_5e
  */
   }
 
-  /* "ssh/event.pyx":76
+  /* "ssh/event.pyx":77
  *         if rc == 0:
  *             self._sock = None
  *         return rc             # <<<<<<<<<<<<<<
@@ -2162,13 +2162,13 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_6remove_fd(struct __pyx_obj_3ssh_5e
  *     def add_session(self, Session session):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "ssh/event.pyx":69
+  /* "ssh/event.pyx":70
  *         return rc
  * 
  *     def remove_fd(self, socket):             # <<<<<<<<<<<<<<
@@ -2187,7 +2187,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_6remove_fd(struct __pyx_obj_3ssh_5e
   return __pyx_r;
 }
 
-/* "ssh/event.pyx":78
+/* "ssh/event.pyx":79
  *         return rc
  * 
  *     def add_session(self, Session session):             # <<<<<<<<<<<<<<
@@ -2202,7 +2202,7 @@ static PyObject *__pyx_pw_3ssh_5event_5Event_9add_session(PyObject *__pyx_v_self
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("add_session (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_session), __pyx_ptype_3ssh_7session_Session, 1, "session", 0))) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_session), __pyx_ptype_3ssh_7session_Session, 1, "session", 0))) __PYX_ERR(0, 79, __pyx_L1_error)
   __pyx_r = __pyx_pf_3ssh_5event_5Event_8add_session(((struct __pyx_obj_3ssh_5event_Event *)__pyx_v_self), ((struct __pyx_obj_3ssh_7session_Session *)__pyx_v_session));
 
   /* function exit code */
@@ -2222,7 +2222,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_8add_session(struct __pyx_obj_3ssh_
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("add_session", 0);
 
-  /* "ssh/event.pyx":80
+  /* "ssh/event.pyx":81
  *     def add_session(self, Session session):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2237,7 +2237,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_8add_session(struct __pyx_obj_3ssh_
       #endif
       /*try:*/ {
 
-        /* "ssh/event.pyx":81
+        /* "ssh/event.pyx":82
  *         cdef int rc
  *         with nogil:
  *             rc = c_ssh.ssh_event_add_session(self._event, session._session)             # <<<<<<<<<<<<<<
@@ -2247,7 +2247,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_8add_session(struct __pyx_obj_3ssh_
         __pyx_v_rc = ssh_event_add_session(__pyx_v_self->_event, __pyx_v_session->_session);
       }
 
-      /* "ssh/event.pyx":80
+      /* "ssh/event.pyx":81
  *     def add_session(self, Session session):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2266,16 +2266,16 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_8add_session(struct __pyx_obj_3ssh_
       }
   }
 
-  /* "ssh/event.pyx":82
+  /* "ssh/event.pyx":83
  *         with nogil:
  *             rc = c_ssh.ssh_event_add_session(self._event, session._session)
  *         handle_ssh_error_codes(rc, session._session)             # <<<<<<<<<<<<<<
  *         self.session = session
  *         return rc
  */
-  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 83, __pyx_L1_error)
 
-  /* "ssh/event.pyx":83
+  /* "ssh/event.pyx":84
  *             rc = c_ssh.ssh_event_add_session(self._event, session._session)
  *         handle_ssh_error_codes(rc, session._session)
  *         self.session = session             # <<<<<<<<<<<<<<
@@ -2288,7 +2288,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_8add_session(struct __pyx_obj_3ssh_
   __Pyx_DECREF(((PyObject *)__pyx_v_self->session));
   __pyx_v_self->session = __pyx_v_session;
 
-  /* "ssh/event.pyx":84
+  /* "ssh/event.pyx":85
  *         handle_ssh_error_codes(rc, session._session)
  *         self.session = session
  *         return rc             # <<<<<<<<<<<<<<
@@ -2296,13 +2296,13 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_8add_session(struct __pyx_obj_3ssh_
  *     def add_connector(self, Connector connector):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "ssh/event.pyx":78
+  /* "ssh/event.pyx":79
  *         return rc
  * 
  *     def add_session(self, Session session):             # <<<<<<<<<<<<<<
@@ -2321,7 +2321,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_8add_session(struct __pyx_obj_3ssh_
   return __pyx_r;
 }
 
-/* "ssh/event.pyx":86
+/* "ssh/event.pyx":87
  *         return rc
  * 
  *     def add_connector(self, Connector connector):             # <<<<<<<<<<<<<<
@@ -2336,7 +2336,7 @@ static PyObject *__pyx_pw_3ssh_5event_5Event_11add_connector(PyObject *__pyx_v_s
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("add_connector (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_connector), __pyx_ptype_3ssh_9connector_Connector, 1, "connector", 0))) __PYX_ERR(0, 86, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_connector), __pyx_ptype_3ssh_9connector_Connector, 1, "connector", 0))) __PYX_ERR(0, 87, __pyx_L1_error)
   __pyx_r = __pyx_pf_3ssh_5event_5Event_10add_connector(((struct __pyx_obj_3ssh_5event_Event *)__pyx_v_self), ((struct __pyx_obj_3ssh_9connector_Connector *)__pyx_v_connector));
 
   /* function exit code */
@@ -2357,7 +2357,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_10add_connector(struct __pyx_obj_3s
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("add_connector", 0);
 
-  /* "ssh/event.pyx":88
+  /* "ssh/event.pyx":89
  *     def add_connector(self, Connector connector):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2372,7 +2372,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_10add_connector(struct __pyx_obj_3s
       #endif
       /*try:*/ {
 
-        /* "ssh/event.pyx":89
+        /* "ssh/event.pyx":90
  *         cdef int rc
  *         with nogil:
  *             rc = c_ssh.ssh_event_add_connector(             # <<<<<<<<<<<<<<
@@ -2382,7 +2382,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_10add_connector(struct __pyx_obj_3s
         __pyx_v_rc = ssh_event_add_connector(__pyx_v_self->_event, __pyx_v_connector->_connector);
       }
 
-      /* "ssh/event.pyx":88
+      /* "ssh/event.pyx":89
  *     def add_connector(self, Connector connector):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2401,7 +2401,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_10add_connector(struct __pyx_obj_3s
       }
   }
 
-  /* "ssh/event.pyx":91
+  /* "ssh/event.pyx":92
  *             rc = c_ssh.ssh_event_add_connector(
  *                 self._event, connector._connector)
  *         if rc == 0:             # <<<<<<<<<<<<<<
@@ -2411,7 +2411,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_10add_connector(struct __pyx_obj_3s
   __pyx_t_1 = ((__pyx_v_rc == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "ssh/event.pyx":92
+    /* "ssh/event.pyx":93
  *                 self._event, connector._connector)
  *         if rc == 0:
  *             self.connector = connector             # <<<<<<<<<<<<<<
@@ -2424,7 +2424,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_10add_connector(struct __pyx_obj_3s
     __Pyx_DECREF(((PyObject *)__pyx_v_self->connector));
     __pyx_v_self->connector = __pyx_v_connector;
 
-    /* "ssh/event.pyx":91
+    /* "ssh/event.pyx":92
  *             rc = c_ssh.ssh_event_add_connector(
  *                 self._event, connector._connector)
  *         if rc == 0:             # <<<<<<<<<<<<<<
@@ -2433,7 +2433,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_10add_connector(struct __pyx_obj_3s
  */
   }
 
-  /* "ssh/event.pyx":93
+  /* "ssh/event.pyx":94
  *         if rc == 0:
  *             self.connector = connector
  *         return handle_ssh_error_codes(rc, connector.session._session)             # <<<<<<<<<<<<<<
@@ -2441,14 +2441,14 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_10add_connector(struct __pyx_obj_3s
  *     def dopoll(self, int timeout):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_connector->session->_session); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 93, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __pyx_t_2 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_connector->session->_session); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 94, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "ssh/event.pyx":86
+  /* "ssh/event.pyx":87
  *         return rc
  * 
  *     def add_connector(self, Connector connector):             # <<<<<<<<<<<<<<
@@ -2467,7 +2467,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_10add_connector(struct __pyx_obj_3s
   return __pyx_r;
 }
 
-/* "ssh/event.pyx":95
+/* "ssh/event.pyx":96
  *         return handle_ssh_error_codes(rc, connector.session._session)
  * 
  *     def dopoll(self, int timeout):             # <<<<<<<<<<<<<<
@@ -2484,7 +2484,7 @@ static PyObject *__pyx_pw_3ssh_5event_5Event_13dopoll(PyObject *__pyx_v_self, Py
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("dopoll (wrapper)", 0);
   assert(__pyx_arg_timeout); {
-    __pyx_v_timeout = __Pyx_PyInt_As_int(__pyx_arg_timeout); if (unlikely((__pyx_v_timeout == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 95, __pyx_L3_error)
+    __pyx_v_timeout = __Pyx_PyInt_As_int(__pyx_arg_timeout); if (unlikely((__pyx_v_timeout == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 96, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2506,7 +2506,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_12dopoll(struct __pyx_obj_3ssh_5eve
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("dopoll", 0);
 
-  /* "ssh/event.pyx":97
+  /* "ssh/event.pyx":98
  *     def dopoll(self, int timeout):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2521,7 +2521,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_12dopoll(struct __pyx_obj_3ssh_5eve
       #endif
       /*try:*/ {
 
-        /* "ssh/event.pyx":98
+        /* "ssh/event.pyx":99
  *         cdef int rc
  *         with nogil:
  *             rc = c_ssh.ssh_event_dopoll(self._event, timeout)             # <<<<<<<<<<<<<<
@@ -2531,7 +2531,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_12dopoll(struct __pyx_obj_3ssh_5eve
         __pyx_v_rc = ssh_event_dopoll(__pyx_v_self->_event, __pyx_v_timeout);
       }
 
-      /* "ssh/event.pyx":97
+      /* "ssh/event.pyx":98
  *     def dopoll(self, int timeout):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2550,7 +2550,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_12dopoll(struct __pyx_obj_3ssh_5eve
       }
   }
 
-  /* "ssh/event.pyx":99
+  /* "ssh/event.pyx":100
  *         with nogil:
  *             rc = c_ssh.ssh_event_dopoll(self._event, timeout)
  *         return rc             # <<<<<<<<<<<<<<
@@ -2558,13 +2558,13 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_12dopoll(struct __pyx_obj_3ssh_5eve
  *     def remove_session(self, Session session):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 100, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ssh/event.pyx":95
+  /* "ssh/event.pyx":96
  *         return handle_ssh_error_codes(rc, connector.session._session)
  * 
  *     def dopoll(self, int timeout):             # <<<<<<<<<<<<<<
@@ -2583,7 +2583,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_12dopoll(struct __pyx_obj_3ssh_5eve
   return __pyx_r;
 }
 
-/* "ssh/event.pyx":101
+/* "ssh/event.pyx":102
  *         return rc
  * 
  *     def remove_session(self, Session session):             # <<<<<<<<<<<<<<
@@ -2598,7 +2598,7 @@ static PyObject *__pyx_pw_3ssh_5event_5Event_15remove_session(PyObject *__pyx_v_
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("remove_session (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_session), __pyx_ptype_3ssh_7session_Session, 1, "session", 0))) __PYX_ERR(0, 101, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_session), __pyx_ptype_3ssh_7session_Session, 1, "session", 0))) __PYX_ERR(0, 102, __pyx_L1_error)
   __pyx_r = __pyx_pf_3ssh_5event_5Event_14remove_session(((struct __pyx_obj_3ssh_5event_Event *)__pyx_v_self), ((struct __pyx_obj_3ssh_7session_Session *)__pyx_v_session));
 
   /* function exit code */
@@ -2618,7 +2618,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_14remove_session(struct __pyx_obj_3
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("remove_session", 0);
 
-  /* "ssh/event.pyx":103
+  /* "ssh/event.pyx":104
  *     def remove_session(self, Session session):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2633,7 +2633,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_14remove_session(struct __pyx_obj_3
       #endif
       /*try:*/ {
 
-        /* "ssh/event.pyx":104
+        /* "ssh/event.pyx":105
  *         cdef int rc
  *         with nogil:
  *             rc = c_ssh.ssh_event_remove_session(self._event, session._session)             # <<<<<<<<<<<<<<
@@ -2643,7 +2643,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_14remove_session(struct __pyx_obj_3
         __pyx_v_rc = ssh_event_remove_session(__pyx_v_self->_event, __pyx_v_session->_session);
       }
 
-      /* "ssh/event.pyx":103
+      /* "ssh/event.pyx":104
  *     def remove_session(self, Session session):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2662,16 +2662,16 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_14remove_session(struct __pyx_obj_3
       }
   }
 
-  /* "ssh/event.pyx":105
+  /* "ssh/event.pyx":106
  *         with nogil:
  *             rc = c_ssh.ssh_event_remove_session(self._event, session._session)
  *         handle_ssh_error_codes(rc, session._session)             # <<<<<<<<<<<<<<
  *         self.session = None
  *         return rc
  */
-  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 105, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 106, __pyx_L1_error)
 
-  /* "ssh/event.pyx":106
+  /* "ssh/event.pyx":107
  *             rc = c_ssh.ssh_event_remove_session(self._event, session._session)
  *         handle_ssh_error_codes(rc, session._session)
  *         self.session = None             # <<<<<<<<<<<<<<
@@ -2684,7 +2684,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_14remove_session(struct __pyx_obj_3
   __Pyx_DECREF(((PyObject *)__pyx_v_self->session));
   __pyx_v_self->session = ((struct __pyx_obj_3ssh_7session_Session *)Py_None);
 
-  /* "ssh/event.pyx":107
+  /* "ssh/event.pyx":108
  *         handle_ssh_error_codes(rc, session._session)
  *         self.session = None
  *         return rc             # <<<<<<<<<<<<<<
@@ -2692,13 +2692,13 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_14remove_session(struct __pyx_obj_3
  *     def remove_connector(self, Connector connector):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 107, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_rc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "ssh/event.pyx":101
+  /* "ssh/event.pyx":102
  *         return rc
  * 
  *     def remove_session(self, Session session):             # <<<<<<<<<<<<<<
@@ -2717,7 +2717,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_14remove_session(struct __pyx_obj_3
   return __pyx_r;
 }
 
-/* "ssh/event.pyx":109
+/* "ssh/event.pyx":110
  *         return rc
  * 
  *     def remove_connector(self, Connector connector):             # <<<<<<<<<<<<<<
@@ -2732,7 +2732,7 @@ static PyObject *__pyx_pw_3ssh_5event_5Event_17remove_connector(PyObject *__pyx_
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("remove_connector (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_connector), __pyx_ptype_3ssh_9connector_Connector, 1, "connector", 0))) __PYX_ERR(0, 109, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_connector), __pyx_ptype_3ssh_9connector_Connector, 1, "connector", 0))) __PYX_ERR(0, 110, __pyx_L1_error)
   __pyx_r = __pyx_pf_3ssh_5event_5Event_16remove_connector(((struct __pyx_obj_3ssh_5event_Event *)__pyx_v_self), ((struct __pyx_obj_3ssh_9connector_Connector *)__pyx_v_connector));
 
   /* function exit code */
@@ -2753,7 +2753,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_16remove_connector(struct __pyx_obj
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("remove_connector", 0);
 
-  /* "ssh/event.pyx":111
+  /* "ssh/event.pyx":112
  *     def remove_connector(self, Connector connector):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2768,7 +2768,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_16remove_connector(struct __pyx_obj
       #endif
       /*try:*/ {
 
-        /* "ssh/event.pyx":112
+        /* "ssh/event.pyx":113
  *         cdef int rc
  *         with nogil:
  *             rc = c_ssh.ssh_event_remove_connector(             # <<<<<<<<<<<<<<
@@ -2778,7 +2778,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_16remove_connector(struct __pyx_obj
         __pyx_v_rc = ssh_event_remove_connector(__pyx_v_self->_event, __pyx_v_connector->_connector);
       }
 
-      /* "ssh/event.pyx":111
+      /* "ssh/event.pyx":112
  *     def remove_connector(self, Connector connector):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2797,7 +2797,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_16remove_connector(struct __pyx_obj
       }
   }
 
-  /* "ssh/event.pyx":114
+  /* "ssh/event.pyx":115
  *             rc = c_ssh.ssh_event_remove_connector(
  *                 self._event, connector._connector)
  *         if rc == 0:             # <<<<<<<<<<<<<<
@@ -2807,7 +2807,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_16remove_connector(struct __pyx_obj
   __pyx_t_1 = ((__pyx_v_rc == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "ssh/event.pyx":115
+    /* "ssh/event.pyx":116
  *                 self._event, connector._connector)
  *         if rc == 0:
  *             self.connector = None             # <<<<<<<<<<<<<<
@@ -2819,7 +2819,7 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_16remove_connector(struct __pyx_obj
     __Pyx_DECREF(((PyObject *)__pyx_v_self->connector));
     __pyx_v_self->connector = ((struct __pyx_obj_3ssh_9connector_Connector *)Py_None);
 
-    /* "ssh/event.pyx":114
+    /* "ssh/event.pyx":115
  *             rc = c_ssh.ssh_event_remove_connector(
  *                 self._event, connector._connector)
  *         if rc == 0:             # <<<<<<<<<<<<<<
@@ -2828,20 +2828,20 @@ static PyObject *__pyx_pf_3ssh_5event_5Event_16remove_connector(struct __pyx_obj
  */
   }
 
-  /* "ssh/event.pyx":116
+  /* "ssh/event.pyx":117
  *         if rc == 0:
  *             self.connector = None
  *         return handle_ssh_error_codes(rc, connector.session._session)             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_connector->session->_session); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 116, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_t_2 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_connector->session->_session); if (unlikely(__pyx_t_2 == ((int)-1))) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 117, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "ssh/event.pyx":109
+  /* "ssh/event.pyx":110
  *         return rc
  * 
  *     def remove_connector(self, Connector connector):             # <<<<<<<<<<<<<<

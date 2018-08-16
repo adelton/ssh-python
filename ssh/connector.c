@@ -875,7 +875,7 @@ struct __pyx_vtabstruct_3ssh_7channel_Channel {
 static struct __pyx_vtabstruct_3ssh_7channel_Channel *__pyx_vtabptr_3ssh_7channel_Channel;
 
 
-/* "ssh/connector.pyx":27
+/* "ssh/connector.pyx":26
  * 
  * 
  * cdef class Flag:             # <<<<<<<<<<<<<<
@@ -889,7 +889,7 @@ struct __pyx_vtabstruct_3ssh_9connector_Flag {
 static struct __pyx_vtabstruct_3ssh_9connector_Flag *__pyx_vtabptr_3ssh_9connector_Flag;
 
 
-/* "ssh/connector.pyx":53
+/* "ssh/connector.pyx":52
  * 
  * 
  * cdef class Connector:             # <<<<<<<<<<<<<<
@@ -1412,7 +1412,7 @@ static PyObject *__pyx_tuple__3;
 static PyObject *__pyx_codeobj__4;
 /* Late includes */
 
-/* "ssh/connector.pyx":30
+/* "ssh/connector.pyx":29
  * 
  *     @staticmethod
  *     cdef Flag from_flag(c_ssh.ssh_connector_flags_e flag):             # <<<<<<<<<<<<<<
@@ -1427,19 +1427,19 @@ static struct __pyx_obj_3ssh_9connector_Flag *__pyx_f_3ssh_9connector_4Flag_from
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("from_flag", 0);
 
-  /* "ssh/connector.pyx":31
+  /* "ssh/connector.pyx":30
  *     @staticmethod
  *     cdef Flag from_flag(c_ssh.ssh_connector_flags_e flag):
  *         cdef Flag _flag = Flag.__new__(Flag)             # <<<<<<<<<<<<<<
  *         _flag._flag = flag
  *         return _flag
  */
-  __pyx_t_1 = ((PyObject *)__pyx_tp_new_3ssh_9connector_Flag(((PyTypeObject *)__pyx_ptype_3ssh_9connector_Flag), __pyx_empty_tuple, NULL)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 31, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_tp_new_3ssh_9connector_Flag(((PyTypeObject *)__pyx_ptype_3ssh_9connector_Flag), __pyx_empty_tuple, NULL)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 30, __pyx_L1_error)
   __Pyx_GOTREF(((PyObject *)__pyx_t_1));
   __pyx_v__flag = ((struct __pyx_obj_3ssh_9connector_Flag *)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "ssh/connector.pyx":32
+  /* "ssh/connector.pyx":31
  *     cdef Flag from_flag(c_ssh.ssh_connector_flags_e flag):
  *         cdef Flag _flag = Flag.__new__(Flag)
  *         _flag._flag = flag             # <<<<<<<<<<<<<<
@@ -1448,7 +1448,7 @@ static struct __pyx_obj_3ssh_9connector_Flag *__pyx_f_3ssh_9connector_4Flag_from
  */
   __pyx_v__flag->_flag = __pyx_v_flag;
 
-  /* "ssh/connector.pyx":33
+  /* "ssh/connector.pyx":32
  *         cdef Flag _flag = Flag.__new__(Flag)
  *         _flag._flag = flag
  *         return _flag             # <<<<<<<<<<<<<<
@@ -1460,7 +1460,7 @@ static struct __pyx_obj_3ssh_9connector_Flag *__pyx_f_3ssh_9connector_4Flag_from
   __pyx_r = __pyx_v__flag;
   goto __pyx_L0;
 
-  /* "ssh/connector.pyx":30
+  /* "ssh/connector.pyx":29
  * 
  *     @staticmethod
  *     cdef Flag from_flag(c_ssh.ssh_connector_flags_e flag):             # <<<<<<<<<<<<<<
@@ -1480,7 +1480,7 @@ static struct __pyx_obj_3ssh_9connector_Flag *__pyx_f_3ssh_9connector_4Flag_from
   return __pyx_r;
 }
 
-/* "ssh/connector.pyx":35
+/* "ssh/connector.pyx":34
  *         return _flag
  * 
  *     def __eq__(self, Flag other not None):             # <<<<<<<<<<<<<<
@@ -1494,7 +1494,7 @@ static PyObject *__pyx_pw_3ssh_9connector_4Flag_1__eq__(PyObject *__pyx_v_self, 
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__eq__ (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_3ssh_9connector_Flag, 0, "other", 0))) __PYX_ERR(1, 35, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_other), __pyx_ptype_3ssh_9connector_Flag, 0, "other", 0))) __PYX_ERR(1, 34, __pyx_L1_error)
   __pyx_r = __pyx_pf_3ssh_9connector_4Flag___eq__(((struct __pyx_obj_3ssh_9connector_Flag *)__pyx_v_self), ((struct __pyx_obj_3ssh_9connector_Flag *)__pyx_v_other));
 
   /* function exit code */
@@ -1512,7 +1512,7 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag___eq__(struct __pyx_obj_3ssh_9co
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("__eq__", 0);
 
-  /* "ssh/connector.pyx":36
+  /* "ssh/connector.pyx":35
  * 
  *     def __eq__(self, Flag other not None):
  *         return self._flag == other._flag             # <<<<<<<<<<<<<<
@@ -1520,13 +1520,13 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag___eq__(struct __pyx_obj_3ssh_9co
  *     def __str__(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_self->_flag == __pyx_v_other->_flag)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 36, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyBool_FromLong((__pyx_v_self->_flag == __pyx_v_other->_flag)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 35, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ssh/connector.pyx":35
+  /* "ssh/connector.pyx":34
  *         return _flag
  * 
  *     def __eq__(self, Flag other not None):             # <<<<<<<<<<<<<<
@@ -1545,7 +1545,7 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag___eq__(struct __pyx_obj_3ssh_9co
   return __pyx_r;
 }
 
-/* "ssh/connector.pyx":38
+/* "ssh/connector.pyx":37
  *         return self._flag == other._flag
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -1573,7 +1573,7 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag_2__str__(struct __pyx_obj_3ssh_9
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__str__", 0);
 
-  /* "ssh/connector.pyx":39
+  /* "ssh/connector.pyx":38
  * 
  *     def __str__(self):
  *         return str(self._flag)             # <<<<<<<<<<<<<<
@@ -1581,16 +1581,16 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag_2__str__(struct __pyx_obj_3ssh_9
  *     def __repr__(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_enum__ssh_connector_flags_e(__pyx_v_self->_flag); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 39, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_enum__ssh_connector_flags_e(__pyx_v_self->_flag); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 39, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyString_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 38, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "ssh/connector.pyx":38
+  /* "ssh/connector.pyx":37
  *         return self._flag == other._flag
  * 
  *     def __str__(self):             # <<<<<<<<<<<<<<
@@ -1610,7 +1610,7 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag_2__str__(struct __pyx_obj_3ssh_9
   return __pyx_r;
 }
 
-/* "ssh/connector.pyx":41
+/* "ssh/connector.pyx":40
  *         return str(self._flag)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1639,7 +1639,7 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag_4__repr__(struct __pyx_obj_3ssh_
   PyObject *__pyx_t_3 = NULL;
   __Pyx_RefNannySetupContext("__repr__", 0);
 
-  /* "ssh/connector.pyx":42
+  /* "ssh/connector.pyx":41
  * 
  *     def __repr__(self):
  *         return self.__str__()             # <<<<<<<<<<<<<<
@@ -1647,7 +1647,7 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag_4__repr__(struct __pyx_obj_3ssh_
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_str); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 42, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_str); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -1660,10 +1660,10 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag_4__repr__(struct __pyx_obj_3ssh_
     }
   }
   if (__pyx_t_3) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 42, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 41, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else {
-    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 42, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallNoArg(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 41, __pyx_L1_error)
   }
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -1671,7 +1671,7 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag_4__repr__(struct __pyx_obj_3ssh_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ssh/connector.pyx":41
+  /* "ssh/connector.pyx":40
  *         return str(self._flag)
  * 
  *     def __repr__(self):             # <<<<<<<<<<<<<<
@@ -1982,7 +1982,7 @@ static PyObject *__pyx_pf_3ssh_9connector_4Flag_8__setstate_cython__(struct __py
   return __pyx_r;
 }
 
-/* "ssh/connector.pyx":55
+/* "ssh/connector.pyx":54
  * cdef class Connector:
  * 
  *     def __cinit__(self, Session session):             # <<<<<<<<<<<<<<
@@ -2016,7 +2016,7 @@ static int __pyx_pw_3ssh_9connector_9Connector_1__cinit__(PyObject *__pyx_v_self
         else goto __pyx_L5_argtuple_error;
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(1, 55, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") < 0)) __PYX_ERR(1, 54, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 1) {
       goto __pyx_L5_argtuple_error;
@@ -2027,13 +2027,13 @@ static int __pyx_pw_3ssh_9connector_9Connector_1__cinit__(PyObject *__pyx_v_self
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 55, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 1, 1, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 54, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("ssh.connector.Connector.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_session), __pyx_ptype_3ssh_7session_Session, 1, "session", 0))) __PYX_ERR(1, 55, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_session), __pyx_ptype_3ssh_7session_Session, 1, "session", 0))) __PYX_ERR(1, 54, __pyx_L1_error)
   __pyx_r = __pyx_pf_3ssh_9connector_9Connector___cinit__(((struct __pyx_obj_3ssh_9connector_Connector *)__pyx_v_self), __pyx_v_session);
 
   /* function exit code */
@@ -2050,7 +2050,7 @@ static int __pyx_pf_3ssh_9connector_9Connector___cinit__(struct __pyx_obj_3ssh_9
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__cinit__", 0);
 
-  /* "ssh/connector.pyx":56
+  /* "ssh/connector.pyx":55
  * 
  *     def __cinit__(self, Session session):
  *         self.session = session             # <<<<<<<<<<<<<<
@@ -2063,7 +2063,7 @@ static int __pyx_pf_3ssh_9connector_9Connector___cinit__(struct __pyx_obj_3ssh_9
   __Pyx_DECREF(((PyObject *)__pyx_v_self->session));
   __pyx_v_self->session = __pyx_v_session;
 
-  /* "ssh/connector.pyx":55
+  /* "ssh/connector.pyx":54
  * cdef class Connector:
  * 
  *     def __cinit__(self, Session session):             # <<<<<<<<<<<<<<
@@ -2077,7 +2077,7 @@ static int __pyx_pf_3ssh_9connector_9Connector___cinit__(struct __pyx_obj_3ssh_9
   return __pyx_r;
 }
 
-/* "ssh/connector.pyx":58
+/* "ssh/connector.pyx":57
  *         self.session = session
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -2101,7 +2101,7 @@ static void __pyx_pf_3ssh_9connector_9Connector_2__dealloc__(struct __pyx_obj_3s
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "ssh/connector.pyx":59
+  /* "ssh/connector.pyx":58
  * 
  *     def __dealloc__(self):
  *         if self._connector is not NULL:             # <<<<<<<<<<<<<<
@@ -2111,7 +2111,7 @@ static void __pyx_pf_3ssh_9connector_9Connector_2__dealloc__(struct __pyx_obj_3s
   __pyx_t_1 = ((__pyx_v_self->_connector != NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "ssh/connector.pyx":60
+    /* "ssh/connector.pyx":59
  *     def __dealloc__(self):
  *         if self._connector is not NULL:
  *             c_ssh.ssh_connector_free(self._connector)             # <<<<<<<<<<<<<<
@@ -2120,7 +2120,7 @@ static void __pyx_pf_3ssh_9connector_9Connector_2__dealloc__(struct __pyx_obj_3s
  */
     ssh_connector_free(__pyx_v_self->_connector);
 
-    /* "ssh/connector.pyx":61
+    /* "ssh/connector.pyx":60
  *         if self._connector is not NULL:
  *             c_ssh.ssh_connector_free(self._connector)
  *             self._connector = NULL             # <<<<<<<<<<<<<<
@@ -2129,7 +2129,7 @@ static void __pyx_pf_3ssh_9connector_9Connector_2__dealloc__(struct __pyx_obj_3s
  */
     __pyx_v_self->_connector = NULL;
 
-    /* "ssh/connector.pyx":59
+    /* "ssh/connector.pyx":58
  * 
  *     def __dealloc__(self):
  *         if self._connector is not NULL:             # <<<<<<<<<<<<<<
@@ -2138,7 +2138,7 @@ static void __pyx_pf_3ssh_9connector_9Connector_2__dealloc__(struct __pyx_obj_3s
  */
   }
 
-  /* "ssh/connector.pyx":58
+  /* "ssh/connector.pyx":57
  *         self.session = session
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -2150,7 +2150,7 @@ static void __pyx_pf_3ssh_9connector_9Connector_2__dealloc__(struct __pyx_obj_3s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "ssh/connector.pyx":64
+/* "ssh/connector.pyx":63
  * 
  *     @staticmethod
  *     cdef Connector from_ptr(c_ssh.ssh_connector _connector, Session session):             # <<<<<<<<<<<<<<
@@ -2166,25 +2166,25 @@ static struct __pyx_obj_3ssh_9connector_Connector *__pyx_f_3ssh_9connector_9Conn
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("from_ptr", 0);
 
-  /* "ssh/connector.pyx":65
+  /* "ssh/connector.pyx":64
  *     @staticmethod
  *     cdef Connector from_ptr(c_ssh.ssh_connector _connector, Session session):
  *         cdef Connector connector = Connector.__new__(Connector, session)             # <<<<<<<<<<<<<<
  *         connector._connector = _connector
  *         return connector
  */
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 65, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(((PyObject *)__pyx_v_session));
   __Pyx_GIVEREF(((PyObject *)__pyx_v_session));
   PyTuple_SET_ITEM(__pyx_t_1, 0, ((PyObject *)__pyx_v_session));
-  __pyx_t_2 = ((PyObject *)__pyx_tp_new_3ssh_9connector_Connector(((PyTypeObject *)__pyx_ptype_3ssh_9connector_Connector), __pyx_t_1, NULL)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 65, __pyx_L1_error)
+  __pyx_t_2 = ((PyObject *)__pyx_tp_new_3ssh_9connector_Connector(((PyTypeObject *)__pyx_ptype_3ssh_9connector_Connector), __pyx_t_1, NULL)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 64, __pyx_L1_error)
   __Pyx_GOTREF(((PyObject *)__pyx_t_2));
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_connector = ((struct __pyx_obj_3ssh_9connector_Connector *)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "ssh/connector.pyx":66
+  /* "ssh/connector.pyx":65
  *     cdef Connector from_ptr(c_ssh.ssh_connector _connector, Session session):
  *         cdef Connector connector = Connector.__new__(Connector, session)
  *         connector._connector = _connector             # <<<<<<<<<<<<<<
@@ -2193,7 +2193,7 @@ static struct __pyx_obj_3ssh_9connector_Connector *__pyx_f_3ssh_9connector_9Conn
  */
   __pyx_v_connector->_connector = __pyx_v__connector;
 
-  /* "ssh/connector.pyx":67
+  /* "ssh/connector.pyx":66
  *         cdef Connector connector = Connector.__new__(Connector, session)
  *         connector._connector = _connector
  *         return connector             # <<<<<<<<<<<<<<
@@ -2205,7 +2205,7 @@ static struct __pyx_obj_3ssh_9connector_Connector *__pyx_f_3ssh_9connector_9Conn
   __pyx_r = __pyx_v_connector;
   goto __pyx_L0;
 
-  /* "ssh/connector.pyx":64
+  /* "ssh/connector.pyx":63
  * 
  *     @staticmethod
  *     cdef Connector from_ptr(c_ssh.ssh_connector _connector, Session session):             # <<<<<<<<<<<<<<
@@ -2226,7 +2226,7 @@ static struct __pyx_obj_3ssh_9connector_Connector *__pyx_f_3ssh_9connector_9Conn
   return __pyx_r;
 }
 
-/* "ssh/connector.pyx":69
+/* "ssh/connector.pyx":68
  *         return connector
  * 
  *     def set_in_channel(self, Channel channel, Flag flag):             # <<<<<<<<<<<<<<
@@ -2266,11 +2266,11 @@ static PyObject *__pyx_pw_3ssh_9connector_9Connector_5set_in_channel(PyObject *_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_flag)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_in_channel", 1, 2, 2, 1); __PYX_ERR(1, 69, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_in_channel", 1, 2, 2, 1); __PYX_ERR(1, 68, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_in_channel") < 0)) __PYX_ERR(1, 69, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_in_channel") < 0)) __PYX_ERR(1, 68, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2283,14 +2283,14 @@ static PyObject *__pyx_pw_3ssh_9connector_9Connector_5set_in_channel(PyObject *_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_in_channel", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 69, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_in_channel", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 68, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("ssh.connector.Connector.set_in_channel", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_channel), __pyx_ptype_3ssh_7channel_Channel, 1, "channel", 0))) __PYX_ERR(1, 69, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_flag), __pyx_ptype_3ssh_9connector_Flag, 1, "flag", 0))) __PYX_ERR(1, 69, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_channel), __pyx_ptype_3ssh_7channel_Channel, 1, "channel", 0))) __PYX_ERR(1, 68, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_flag), __pyx_ptype_3ssh_9connector_Flag, 1, "flag", 0))) __PYX_ERR(1, 68, __pyx_L1_error)
   __pyx_r = __pyx_pf_3ssh_9connector_9Connector_4set_in_channel(((struct __pyx_obj_3ssh_9connector_Connector *)__pyx_v_self), __pyx_v_channel, __pyx_v_flag);
 
   /* function exit code */
@@ -2310,7 +2310,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_4set_in_channel(struct __py
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("set_in_channel", 0);
 
-  /* "ssh/connector.pyx":71
+  /* "ssh/connector.pyx":70
  *     def set_in_channel(self, Channel channel, Flag flag):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2325,7 +2325,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_4set_in_channel(struct __py
       #endif
       /*try:*/ {
 
-        /* "ssh/connector.pyx":72
+        /* "ssh/connector.pyx":71
  *         cdef int rc
  *         with nogil:
  *             rc = c_ssh.ssh_connector_set_in_channel(             # <<<<<<<<<<<<<<
@@ -2335,7 +2335,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_4set_in_channel(struct __py
         __pyx_v_rc = ssh_connector_set_in_channel(__pyx_v_self->_connector, __pyx_v_channel->_channel, __pyx_v_flag->_flag);
       }
 
-      /* "ssh/connector.pyx":71
+      /* "ssh/connector.pyx":70
  *     def set_in_channel(self, Channel channel, Flag flag):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2354,7 +2354,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_4set_in_channel(struct __py
       }
   }
 
-  /* "ssh/connector.pyx":74
+  /* "ssh/connector.pyx":73
  *             rc = c_ssh.ssh_connector_set_in_channel(
  *                 self._connector, channel._channel, flag._flag)
  *         return handle_ssh_error_codes(rc, self.session._session)             # <<<<<<<<<<<<<<
@@ -2362,14 +2362,14 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_4set_in_channel(struct __py
  *     def set_out_channel(self, Channel channel, Flag flag):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_self->session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 74, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 74, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_self->session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 73, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 73, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "ssh/connector.pyx":69
+  /* "ssh/connector.pyx":68
  *         return connector
  * 
  *     def set_in_channel(self, Channel channel, Flag flag):             # <<<<<<<<<<<<<<
@@ -2388,7 +2388,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_4set_in_channel(struct __py
   return __pyx_r;
 }
 
-/* "ssh/connector.pyx":76
+/* "ssh/connector.pyx":75
  *         return handle_ssh_error_codes(rc, self.session._session)
  * 
  *     def set_out_channel(self, Channel channel, Flag flag):             # <<<<<<<<<<<<<<
@@ -2428,11 +2428,11 @@ static PyObject *__pyx_pw_3ssh_9connector_9Connector_7set_out_channel(PyObject *
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_flag)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("set_out_channel", 1, 2, 2, 1); __PYX_ERR(1, 76, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("set_out_channel", 1, 2, 2, 1); __PYX_ERR(1, 75, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_out_channel") < 0)) __PYX_ERR(1, 76, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "set_out_channel") < 0)) __PYX_ERR(1, 75, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2445,14 +2445,14 @@ static PyObject *__pyx_pw_3ssh_9connector_9Connector_7set_out_channel(PyObject *
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("set_out_channel", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 76, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("set_out_channel", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(1, 75, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("ssh.connector.Connector.set_out_channel", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_channel), __pyx_ptype_3ssh_7channel_Channel, 1, "channel", 0))) __PYX_ERR(1, 76, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_flag), __pyx_ptype_3ssh_9connector_Flag, 1, "flag", 0))) __PYX_ERR(1, 76, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_channel), __pyx_ptype_3ssh_7channel_Channel, 1, "channel", 0))) __PYX_ERR(1, 75, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_flag), __pyx_ptype_3ssh_9connector_Flag, 1, "flag", 0))) __PYX_ERR(1, 75, __pyx_L1_error)
   __pyx_r = __pyx_pf_3ssh_9connector_9Connector_6set_out_channel(((struct __pyx_obj_3ssh_9connector_Connector *)__pyx_v_self), __pyx_v_channel, __pyx_v_flag);
 
   /* function exit code */
@@ -2472,7 +2472,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_6set_out_channel(struct __p
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("set_out_channel", 0);
 
-  /* "ssh/connector.pyx":78
+  /* "ssh/connector.pyx":77
  *     def set_out_channel(self, Channel channel, Flag flag):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2487,7 +2487,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_6set_out_channel(struct __p
       #endif
       /*try:*/ {
 
-        /* "ssh/connector.pyx":79
+        /* "ssh/connector.pyx":78
  *         cdef int rc
  *         with nogil:
  *             rc = c_ssh.ssh_connector_set_out_channel(             # <<<<<<<<<<<<<<
@@ -2497,7 +2497,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_6set_out_channel(struct __p
         __pyx_v_rc = ssh_connector_set_out_channel(__pyx_v_self->_connector, __pyx_v_channel->_channel, __pyx_v_flag->_flag);
       }
 
-      /* "ssh/connector.pyx":78
+      /* "ssh/connector.pyx":77
  *     def set_out_channel(self, Channel channel, Flag flag):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2516,7 +2516,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_6set_out_channel(struct __p
       }
   }
 
-  /* "ssh/connector.pyx":81
+  /* "ssh/connector.pyx":80
  *             rc = c_ssh.ssh_connector_set_out_channel(
  *                 self._connector, channel._channel, flag._flag)
  *         return handle_ssh_error_codes(rc, self.session._session)             # <<<<<<<<<<<<<<
@@ -2524,14 +2524,14 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_6set_out_channel(struct __p
  *     def set_in_fd(self, socket):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_self->session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 81, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 81, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_self->session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 80, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "ssh/connector.pyx":76
+  /* "ssh/connector.pyx":75
  *         return handle_ssh_error_codes(rc, self.session._session)
  * 
  *     def set_out_channel(self, Channel channel, Flag flag):             # <<<<<<<<<<<<<<
@@ -2550,7 +2550,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_6set_out_channel(struct __p
   return __pyx_r;
 }
 
-/* "ssh/connector.pyx":83
+/* "ssh/connector.pyx":82
  *         return handle_ssh_error_codes(rc, self.session._session)
  * 
  *     def set_in_fd(self, socket):             # <<<<<<<<<<<<<<
@@ -2579,17 +2579,17 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_8set_in_fd(struct __pyx_obj
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("set_in_fd", 0);
 
-  /* "ssh/connector.pyx":84
+  /* "ssh/connector.pyx":83
  * 
  *     def set_in_fd(self, socket):
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)             # <<<<<<<<<<<<<<
  *         with nogil:
  *             c_ssh.ssh_connector_set_in_fd(self._connector, _sock)
  */
-  __pyx_t_1 = PyObject_AsFileDescriptor(__pyx_v_socket); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 84, __pyx_L1_error)
+  __pyx_t_1 = PyObject_AsFileDescriptor(__pyx_v_socket); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 83, __pyx_L1_error)
   __pyx_v__sock = __pyx_t_1;
 
-  /* "ssh/connector.pyx":85
+  /* "ssh/connector.pyx":84
  *     def set_in_fd(self, socket):
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2604,7 +2604,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_8set_in_fd(struct __pyx_obj
       #endif
       /*try:*/ {
 
-        /* "ssh/connector.pyx":86
+        /* "ssh/connector.pyx":85
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)
  *         with nogil:
  *             c_ssh.ssh_connector_set_in_fd(self._connector, _sock)             # <<<<<<<<<<<<<<
@@ -2614,7 +2614,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_8set_in_fd(struct __pyx_obj
         ssh_connector_set_in_fd(__pyx_v_self->_connector, __pyx_v__sock);
       }
 
-      /* "ssh/connector.pyx":85
+      /* "ssh/connector.pyx":84
  *     def set_in_fd(self, socket):
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2633,7 +2633,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_8set_in_fd(struct __pyx_obj
       }
   }
 
-  /* "ssh/connector.pyx":83
+  /* "ssh/connector.pyx":82
  *         return handle_ssh_error_codes(rc, self.session._session)
  * 
  *     def set_in_fd(self, socket):             # <<<<<<<<<<<<<<
@@ -2653,7 +2653,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_8set_in_fd(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "ssh/connector.pyx":88
+/* "ssh/connector.pyx":87
  *             c_ssh.ssh_connector_set_in_fd(self._connector, _sock)
  * 
  *     def set_out_fd(self, socket):             # <<<<<<<<<<<<<<
@@ -2682,17 +2682,17 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_10set_out_fd(struct __pyx_o
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("set_out_fd", 0);
 
-  /* "ssh/connector.pyx":89
+  /* "ssh/connector.pyx":88
  * 
  *     def set_out_fd(self, socket):
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)             # <<<<<<<<<<<<<<
  *         with nogil:
  *             c_ssh.ssh_connector_set_out_fd(self._connector, _sock)
  */
-  __pyx_t_1 = PyObject_AsFileDescriptor(__pyx_v_socket); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 89, __pyx_L1_error)
+  __pyx_t_1 = PyObject_AsFileDescriptor(__pyx_v_socket); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(1, 88, __pyx_L1_error)
   __pyx_v__sock = __pyx_t_1;
 
-  /* "ssh/connector.pyx":90
+  /* "ssh/connector.pyx":89
  *     def set_out_fd(self, socket):
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2706,7 +2706,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_10set_out_fd(struct __pyx_o
       #endif
       /*try:*/ {
 
-        /* "ssh/connector.pyx":91
+        /* "ssh/connector.pyx":90
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)
  *         with nogil:
  *             c_ssh.ssh_connector_set_out_fd(self._connector, _sock)             # <<<<<<<<<<<<<<
@@ -2714,7 +2714,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_10set_out_fd(struct __pyx_o
         ssh_connector_set_out_fd(__pyx_v_self->_connector, __pyx_v__sock);
       }
 
-      /* "ssh/connector.pyx":90
+      /* "ssh/connector.pyx":89
  *     def set_out_fd(self, socket):
  *         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(socket)
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -2732,7 +2732,7 @@ static PyObject *__pyx_pf_3ssh_9connector_9Connector_10set_out_fd(struct __pyx_o
       }
   }
 
-  /* "ssh/connector.pyx":88
+  /* "ssh/connector.pyx":87
  *             c_ssh.ssh_connector_set_in_fd(self._connector, _sock)
  * 
  *     def set_out_fd(self, socket):             # <<<<<<<<<<<<<<
@@ -3777,25 +3777,25 @@ static int __Pyx_modinit_type_init_code(void) {
   /*--- Type init code ---*/
   __pyx_vtabptr_3ssh_9connector_Flag = &__pyx_vtable_3ssh_9connector_Flag;
   __pyx_vtable_3ssh_9connector_Flag.from_flag = (struct __pyx_obj_3ssh_9connector_Flag *(*)(enum ssh_connector_flags_e))__pyx_f_3ssh_9connector_4Flag_from_flag;
-  if (PyType_Ready(&__pyx_type_3ssh_9connector_Flag) < 0) __PYX_ERR(1, 27, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_3ssh_9connector_Flag) < 0) __PYX_ERR(1, 26, __pyx_L1_error)
   __pyx_type_3ssh_9connector_Flag.tp_print = 0;
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_3ssh_9connector_Flag.tp_dictoffset && __pyx_type_3ssh_9connector_Flag.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_3ssh_9connector_Flag.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_3ssh_9connector_Flag.tp_dict, __pyx_vtabptr_3ssh_9connector_Flag) < 0) __PYX_ERR(1, 27, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "Flag", (PyObject *)&__pyx_type_3ssh_9connector_Flag) < 0) __PYX_ERR(1, 27, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_3ssh_9connector_Flag) < 0) __PYX_ERR(1, 27, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_3ssh_9connector_Flag.tp_dict, __pyx_vtabptr_3ssh_9connector_Flag) < 0) __PYX_ERR(1, 26, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "Flag", (PyObject *)&__pyx_type_3ssh_9connector_Flag) < 0) __PYX_ERR(1, 26, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_3ssh_9connector_Flag) < 0) __PYX_ERR(1, 26, __pyx_L1_error)
   __pyx_ptype_3ssh_9connector_Flag = &__pyx_type_3ssh_9connector_Flag;
   __pyx_vtabptr_3ssh_9connector_Connector = &__pyx_vtable_3ssh_9connector_Connector;
   __pyx_vtable_3ssh_9connector_Connector.from_ptr = (struct __pyx_obj_3ssh_9connector_Connector *(*)(ssh_connector, struct __pyx_obj_3ssh_7session_Session *))__pyx_f_3ssh_9connector_9Connector_from_ptr;
-  if (PyType_Ready(&__pyx_type_3ssh_9connector_Connector) < 0) __PYX_ERR(1, 53, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_3ssh_9connector_Connector) < 0) __PYX_ERR(1, 52, __pyx_L1_error)
   __pyx_type_3ssh_9connector_Connector.tp_print = 0;
   if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_type_3ssh_9connector_Connector.tp_dictoffset && __pyx_type_3ssh_9connector_Connector.tp_getattro == PyObject_GenericGetAttr)) {
     __pyx_type_3ssh_9connector_Connector.tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
-  if (__Pyx_SetVtable(__pyx_type_3ssh_9connector_Connector.tp_dict, __pyx_vtabptr_3ssh_9connector_Connector) < 0) __PYX_ERR(1, 53, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "Connector", (PyObject *)&__pyx_type_3ssh_9connector_Connector) < 0) __PYX_ERR(1, 53, __pyx_L1_error)
-  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_3ssh_9connector_Connector) < 0) __PYX_ERR(1, 53, __pyx_L1_error)
+  if (__Pyx_SetVtable(__pyx_type_3ssh_9connector_Connector.tp_dict, __pyx_vtabptr_3ssh_9connector_Connector) < 0) __PYX_ERR(1, 52, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "Connector", (PyObject *)&__pyx_type_3ssh_9connector_Connector) < 0) __PYX_ERR(1, 52, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject*)&__pyx_type_3ssh_9connector_Connector) < 0) __PYX_ERR(1, 52, __pyx_L1_error)
   __pyx_ptype_3ssh_9connector_Connector = &__pyx_type_3ssh_9connector_Connector;
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -4024,40 +4024,40 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   #endif
 
-  /* "ssh/connector.pyx":45
+  /* "ssh/connector.pyx":44
  * 
  * 
  * CONNECTOR_STDOUT = Flag.from_flag(             # <<<<<<<<<<<<<<
  *     c_ssh.ssh_connector_flags_e.SSH_CONNECTOR_STDOUT)
  * CONNECTOR_STDERR = Flag.from_flag(
  */
-  __pyx_t_1 = ((PyObject *)__pyx_f_3ssh_9connector_4Flag_from_flag(SSH_CONNECTOR_STDOUT)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 45, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_3ssh_9connector_4Flag_from_flag(SSH_CONNECTOR_STDOUT)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CONNECTOR_STDOUT, __pyx_t_1) < 0) __PYX_ERR(1, 45, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CONNECTOR_STDOUT, __pyx_t_1) < 0) __PYX_ERR(1, 44, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ssh/connector.pyx":47
+  /* "ssh/connector.pyx":46
  * CONNECTOR_STDOUT = Flag.from_flag(
  *     c_ssh.ssh_connector_flags_e.SSH_CONNECTOR_STDOUT)
  * CONNECTOR_STDERR = Flag.from_flag(             # <<<<<<<<<<<<<<
  *     c_ssh.ssh_connector_flags_e.SSH_CONNECTOR_STDERR)
  * CONNECTOR_BOTH = Flag.from_flag(
  */
-  __pyx_t_1 = ((PyObject *)__pyx_f_3ssh_9connector_4Flag_from_flag(SSH_CONNECTOR_STDERR)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 47, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_3ssh_9connector_4Flag_from_flag(SSH_CONNECTOR_STDERR)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 46, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CONNECTOR_STDERR, __pyx_t_1) < 0) __PYX_ERR(1, 47, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CONNECTOR_STDERR, __pyx_t_1) < 0) __PYX_ERR(1, 46, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "ssh/connector.pyx":49
+  /* "ssh/connector.pyx":48
  * CONNECTOR_STDERR = Flag.from_flag(
  *     c_ssh.ssh_connector_flags_e.SSH_CONNECTOR_STDERR)
  * CONNECTOR_BOTH = Flag.from_flag(             # <<<<<<<<<<<<<<
  *     c_ssh.ssh_connector_flags_e.SSH_CONNECTOR_BOTH)
  * 
  */
-  __pyx_t_1 = ((PyObject *)__pyx_f_3ssh_9connector_4Flag_from_flag(SSH_CONNECTOR_BOTH)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 49, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__pyx_f_3ssh_9connector_4Flag_from_flag(SSH_CONNECTOR_BOTH)); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 48, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CONNECTOR_BOTH, __pyx_t_1) < 0) __PYX_ERR(1, 49, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_CONNECTOR_BOTH, __pyx_t_1) < 0) __PYX_ERR(1, 48, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "(tree fragment)":1

@@ -57,7 +57,8 @@ cdef class Event:
 
     def add_fd(self, sock, short events, callback=None):
         cdef c_ssh.socket_t _sock = PyObject_AsFileDescriptor(sock)
-        cdef c_ssh.ssh_event_callback cb = <c_ssh.ssh_event_callback>&Event.event_callback
+        cdef c_ssh.ssh_event_callback cb = \
+            <c_ssh.ssh_event_callback>&Event.event_callback
         cdef int rc
         cdef void *_cb = NULL if callback is None else <void *>callback
         rc = c_ssh.ssh_event_add_fd(

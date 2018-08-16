@@ -20,8 +20,8 @@ from libc.string cimport memset
 from session cimport Session
 from utils cimport handle_ssh_error_codes
 
-cimport c_callbacks
 from c_ssh cimport ssh_auth_callback
+cimport c_callbacks
 
 
 cdef int auth_callback(const char *prompt, char *buf, size_t len,
@@ -38,7 +38,8 @@ cdef int auth_callback(const char *prompt, char *buf, size_t len,
 cdef class Callbacks:
 
     def __cinit__(self):
-        self._cb = <c_callbacks.ssh_callbacks>malloc(sizeof(c_callbacks.ssh_callbacks_struct))
+        self._cb = <c_callbacks.ssh_callbacks>malloc(
+            sizeof(c_callbacks.ssh_callbacks_struct))
         if self._cb is NULL:
             raise MemoryError
         memset(self._cb, 0, sizeof(c_callbacks.ssh_callbacks_struct))

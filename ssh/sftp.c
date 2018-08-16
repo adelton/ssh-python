@@ -7410,7 +7410,7 @@ if (!__Pyx_RefNanny) {
  * from utils cimport handle_ssh_error_codes, to_bytes
  * from .exceptions import SFTPError, SFTPHandleError             # <<<<<<<<<<<<<<
  * 
- * cimport c_sftp
+ * from c_ssh cimport ssh_get_error, ssh_get_error_code, timeval
  */
   __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 24, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);

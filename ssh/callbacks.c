@@ -1356,8 +1356,8 @@ static int __pyx_f_3ssh_9callbacks_auth_callback(CYTHON_UNUSED char const *__pyx
  * cdef class Callbacks:
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
- *         self._cb = <c_callbacks.ssh_callbacks>malloc(sizeof(c_callbacks.ssh_callbacks_struct))
- *         if self._cb is NULL:
+ *         self._cb = <c_callbacks.ssh_callbacks>malloc(
+ *             sizeof(c_callbacks.ssh_callbacks_struct))
  */
 
 /* Python wrapper */
@@ -1385,15 +1385,15 @@ static int __pyx_pf_3ssh_9callbacks_9Callbacks___cinit__(struct __pyx_obj_3ssh_9
   /* "ssh/callbacks.pyx":41
  * 
  *     def __cinit__(self):
- *         self._cb = <c_callbacks.ssh_callbacks>malloc(sizeof(c_callbacks.ssh_callbacks_struct))             # <<<<<<<<<<<<<<
+ *         self._cb = <c_callbacks.ssh_callbacks>malloc(             # <<<<<<<<<<<<<<
+ *             sizeof(c_callbacks.ssh_callbacks_struct))
  *         if self._cb is NULL:
- *             raise MemoryError
  */
   __pyx_v_self->_cb = ((ssh_callbacks)malloc((sizeof(struct ssh_callbacks_struct))));
 
-  /* "ssh/callbacks.pyx":42
- *     def __cinit__(self):
- *         self._cb = <c_callbacks.ssh_callbacks>malloc(sizeof(c_callbacks.ssh_callbacks_struct))
+  /* "ssh/callbacks.pyx":43
+ *         self._cb = <c_callbacks.ssh_callbacks>malloc(
+ *             sizeof(c_callbacks.ssh_callbacks_struct))
  *         if self._cb is NULL:             # <<<<<<<<<<<<<<
  *             raise MemoryError
  *         memset(self._cb, 0, sizeof(c_callbacks.ssh_callbacks_struct))
@@ -1401,25 +1401,25 @@ static int __pyx_pf_3ssh_9callbacks_9Callbacks___cinit__(struct __pyx_obj_3ssh_9
   __pyx_t_1 = ((__pyx_v_self->_cb == NULL) != 0);
   if (unlikely(__pyx_t_1)) {
 
-    /* "ssh/callbacks.pyx":43
- *         self._cb = <c_callbacks.ssh_callbacks>malloc(sizeof(c_callbacks.ssh_callbacks_struct))
+    /* "ssh/callbacks.pyx":44
+ *             sizeof(c_callbacks.ssh_callbacks_struct))
  *         if self._cb is NULL:
  *             raise MemoryError             # <<<<<<<<<<<<<<
  *         memset(self._cb, 0, sizeof(c_callbacks.ssh_callbacks_struct))
  *         c_callbacks.ssh_callbacks_init(self._cb)
  */
-    PyErr_NoMemory(); __PYX_ERR(0, 43, __pyx_L1_error)
+    PyErr_NoMemory(); __PYX_ERR(0, 44, __pyx_L1_error)
 
-    /* "ssh/callbacks.pyx":42
- *     def __cinit__(self):
- *         self._cb = <c_callbacks.ssh_callbacks>malloc(sizeof(c_callbacks.ssh_callbacks_struct))
+    /* "ssh/callbacks.pyx":43
+ *         self._cb = <c_callbacks.ssh_callbacks>malloc(
+ *             sizeof(c_callbacks.ssh_callbacks_struct))
  *         if self._cb is NULL:             # <<<<<<<<<<<<<<
  *             raise MemoryError
  *         memset(self._cb, 0, sizeof(c_callbacks.ssh_callbacks_struct))
  */
   }
 
-  /* "ssh/callbacks.pyx":44
+  /* "ssh/callbacks.pyx":45
  *         if self._cb is NULL:
  *             raise MemoryError
  *         memset(self._cb, 0, sizeof(c_callbacks.ssh_callbacks_struct))             # <<<<<<<<<<<<<<
@@ -1428,7 +1428,7 @@ static int __pyx_pf_3ssh_9callbacks_9Callbacks___cinit__(struct __pyx_obj_3ssh_9
  */
   (void)(memset(__pyx_v_self->_cb, 0, (sizeof(struct ssh_callbacks_struct))));
 
-  /* "ssh/callbacks.pyx":45
+  /* "ssh/callbacks.pyx":46
  *             raise MemoryError
  *         memset(self._cb, 0, sizeof(c_callbacks.ssh_callbacks_struct))
  *         c_callbacks.ssh_callbacks_init(self._cb)             # <<<<<<<<<<<<<<
@@ -1437,7 +1437,7 @@ static int __pyx_pf_3ssh_9callbacks_9Callbacks___cinit__(struct __pyx_obj_3ssh_9
  */
   ssh_callbacks_init(__pyx_v_self->_cb);
 
-  /* "ssh/callbacks.pyx":47
+  /* "ssh/callbacks.pyx":48
  *         c_callbacks.ssh_callbacks_init(self._cb)
  *         # self._cb.userdata = NULL
  *         self._cb.auth_function = <c_callbacks.ssh_auth_callback>&auth_callback             # <<<<<<<<<<<<<<
@@ -1450,8 +1450,8 @@ static int __pyx_pf_3ssh_9callbacks_9Callbacks___cinit__(struct __pyx_obj_3ssh_9
  * cdef class Callbacks:
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
- *         self._cb = <c_callbacks.ssh_callbacks>malloc(sizeof(c_callbacks.ssh_callbacks_struct))
- *         if self._cb is NULL:
+ *         self._cb = <c_callbacks.ssh_callbacks>malloc(
+ *             sizeof(c_callbacks.ssh_callbacks_struct))
  */
 
   /* function exit code */
@@ -1465,7 +1465,7 @@ static int __pyx_pf_3ssh_9callbacks_9Callbacks___cinit__(struct __pyx_obj_3ssh_9
   return __pyx_r;
 }
 
-/* "ssh/callbacks.pyx":54
+/* "ssh/callbacks.pyx":55
  *         # self._cb.channel_open_request_auth_agent_function = NULL
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -1489,7 +1489,7 @@ static void __pyx_pf_3ssh_9callbacks_9Callbacks_2__dealloc__(struct __pyx_obj_3s
   int __pyx_t_1;
   __Pyx_RefNannySetupContext("__dealloc__", 0);
 
-  /* "ssh/callbacks.pyx":55
+  /* "ssh/callbacks.pyx":56
  * 
  *     def __dealloc__(self):
  *         if self._cb is not NULL:             # <<<<<<<<<<<<<<
@@ -1499,7 +1499,7 @@ static void __pyx_pf_3ssh_9callbacks_9Callbacks_2__dealloc__(struct __pyx_obj_3s
   __pyx_t_1 = ((__pyx_v_self->_cb != NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "ssh/callbacks.pyx":56
+    /* "ssh/callbacks.pyx":57
  *     def __dealloc__(self):
  *         if self._cb is not NULL:
  *             free(self._cb)             # <<<<<<<<<<<<<<
@@ -1508,7 +1508,7 @@ static void __pyx_pf_3ssh_9callbacks_9Callbacks_2__dealloc__(struct __pyx_obj_3s
  */
     free(__pyx_v_self->_cb);
 
-    /* "ssh/callbacks.pyx":57
+    /* "ssh/callbacks.pyx":58
  *         if self._cb is not NULL:
  *             free(self._cb)
  *             self._cb = NULL             # <<<<<<<<<<<<<<
@@ -1517,7 +1517,7 @@ static void __pyx_pf_3ssh_9callbacks_9Callbacks_2__dealloc__(struct __pyx_obj_3s
  */
     __pyx_v_self->_cb = NULL;
 
-    /* "ssh/callbacks.pyx":55
+    /* "ssh/callbacks.pyx":56
  * 
  *     def __dealloc__(self):
  *         if self._cb is not NULL:             # <<<<<<<<<<<<<<
@@ -1526,7 +1526,7 @@ static void __pyx_pf_3ssh_9callbacks_9Callbacks_2__dealloc__(struct __pyx_obj_3s
  */
   }
 
-  /* "ssh/callbacks.pyx":54
+  /* "ssh/callbacks.pyx":55
  *         # self._cb.channel_open_request_auth_agent_function = NULL
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -1538,7 +1538,7 @@ static void __pyx_pf_3ssh_9callbacks_9Callbacks_2__dealloc__(struct __pyx_obj_3s
   __Pyx_RefNannyFinishContext();
 }
 
-/* "ssh/callbacks.pyx":59
+/* "ssh/callbacks.pyx":60
  *             self._cb = NULL
  * 
  *     def set_userdata(self, func not None):             # <<<<<<<<<<<<<<
@@ -1554,7 +1554,7 @@ static PyObject *__pyx_pw_3ssh_9callbacks_9Callbacks_5set_userdata(PyObject *__p
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_userdata (wrapper)", 0);
   if (unlikely(((PyObject *)__pyx_v_func) == Py_None)) {
-    PyErr_Format(PyExc_TypeError, "Argument '%.200s' must not be None", "func"); __PYX_ERR(0, 59, __pyx_L1_error)
+    PyErr_Format(PyExc_TypeError, "Argument '%.200s' must not be None", "func"); __PYX_ERR(0, 60, __pyx_L1_error)
   }
   __pyx_r = __pyx_pf_3ssh_9callbacks_9Callbacks_4set_userdata(((struct __pyx_obj_3ssh_9callbacks_Callbacks *)__pyx_v_self), ((PyObject *)__pyx_v_func));
 
@@ -1572,7 +1572,7 @@ static PyObject *__pyx_pf_3ssh_9callbacks_9Callbacks_4set_userdata(struct __pyx_
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_userdata", 0);
 
-  /* "ssh/callbacks.pyx":60
+  /* "ssh/callbacks.pyx":61
  * 
  *     def set_userdata(self, func not None):
  *         self._cb.userdata = <void *>func             # <<<<<<<<<<<<<<
@@ -1581,7 +1581,7 @@ static PyObject *__pyx_pf_3ssh_9callbacks_9Callbacks_4set_userdata(struct __pyx_
  */
   __pyx_v_self->_cb->userdata = ((void *)__pyx_v_func);
 
-  /* "ssh/callbacks.pyx":59
+  /* "ssh/callbacks.pyx":60
  *             self._cb = NULL
  * 
  *     def set_userdata(self, func not None):             # <<<<<<<<<<<<<<
@@ -1596,7 +1596,7 @@ static PyObject *__pyx_pf_3ssh_9callbacks_9Callbacks_4set_userdata(struct __pyx_
   return __pyx_r;
 }
 
-/* "ssh/callbacks.pyx":62
+/* "ssh/callbacks.pyx":63
  *         self._cb.userdata = <void *>func
  * 
  *     def set_callbacks(self, Session session not None):             # <<<<<<<<<<<<<<
@@ -1611,7 +1611,7 @@ static PyObject *__pyx_pw_3ssh_9callbacks_9Callbacks_7set_callbacks(PyObject *__
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("set_callbacks (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_session), __pyx_ptype_3ssh_7session_Session, 0, "session", 0))) __PYX_ERR(0, 62, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_session), __pyx_ptype_3ssh_7session_Session, 0, "session", 0))) __PYX_ERR(0, 63, __pyx_L1_error)
   __pyx_r = __pyx_pf_3ssh_9callbacks_9Callbacks_6set_callbacks(((struct __pyx_obj_3ssh_9callbacks_Callbacks *)__pyx_v_self), ((struct __pyx_obj_3ssh_7session_Session *)__pyx_v_session));
 
   /* function exit code */
@@ -1631,7 +1631,7 @@ static PyObject *__pyx_pf_3ssh_9callbacks_9Callbacks_6set_callbacks(struct __pyx
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("set_callbacks", 0);
 
-  /* "ssh/callbacks.pyx":64
+  /* "ssh/callbacks.pyx":65
  *     def set_callbacks(self, Session session not None):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -1646,7 +1646,7 @@ static PyObject *__pyx_pf_3ssh_9callbacks_9Callbacks_6set_callbacks(struct __pyx
       #endif
       /*try:*/ {
 
-        /* "ssh/callbacks.pyx":65
+        /* "ssh/callbacks.pyx":66
  *         cdef int rc
  *         with nogil:
  *             rc = c_callbacks.ssh_set_callbacks(             # <<<<<<<<<<<<<<
@@ -1656,7 +1656,7 @@ static PyObject *__pyx_pf_3ssh_9callbacks_9Callbacks_6set_callbacks(struct __pyx
         __pyx_v_rc = ssh_set_callbacks(__pyx_v_session->_session, __pyx_v_self->_cb);
       }
 
-      /* "ssh/callbacks.pyx":64
+      /* "ssh/callbacks.pyx":65
  *     def set_callbacks(self, Session session not None):
  *         cdef int rc
  *         with nogil:             # <<<<<<<<<<<<<<
@@ -1675,20 +1675,20 @@ static PyObject *__pyx_pf_3ssh_9callbacks_9Callbacks_6set_callbacks(struct __pyx
       }
   }
 
-  /* "ssh/callbacks.pyx":67
+  /* "ssh/callbacks.pyx":68
  *             rc = c_callbacks.ssh_set_callbacks(
  *                 session._session, self._cb)
  *         return handle_ssh_error_codes(rc, session._session)             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 67, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 67, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_3ssh_5utils_handle_ssh_error_codes(__pyx_v_rc, __pyx_v_session->_session); if (unlikely(__pyx_t_1 == ((int)-1))) __PYX_ERR(0, 68, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 68, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "ssh/callbacks.pyx":62
+  /* "ssh/callbacks.pyx":63
  *         self._cb.userdata = <void *>func
  * 
  *     def set_callbacks(self, Session session not None):             # <<<<<<<<<<<<<<
@@ -1967,7 +1967,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(0, 43, __pyx_L1_error)
+  __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(0, 44, __pyx_L1_error)
   __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(1, 2, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;

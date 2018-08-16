@@ -3698,8 +3698,8 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_10createtime_2__set_
  * 
  *     @property
  *     def createtime_nseconds(self):             # <<<<<<<<<<<<<<
- *         return self._attrs.createtime_nseconds if self._attrs is not NULL else None
- * 
+ *         return self._attrs.createtime_nseconds \
+ *             if self._attrs is not NULL else None
  */
 
 /* Python wrapper */
@@ -3725,17 +3725,41 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_19createtime_n
   /* "ssh/sftp_attributes.pyx":193
  *     @property
  *     def createtime_nseconds(self):
- *         return self._attrs.createtime_nseconds if self._attrs is not NULL else None             # <<<<<<<<<<<<<<
+ *         return self._attrs.createtime_nseconds \             # <<<<<<<<<<<<<<
+ *             if self._attrs is not NULL else None
+ * 
+ */
+  __Pyx_XDECREF(__pyx_r);
+
+  /* "ssh/sftp_attributes.pyx":194
+ *     def createtime_nseconds(self):
+ *         return self._attrs.createtime_nseconds \
+ *             if self._attrs is not NULL else None             # <<<<<<<<<<<<<<
  * 
  *     @createtime_nseconds.setter
  */
-  __Pyx_XDECREF(__pyx_r);
   if (((__pyx_v_self->_attrs != NULL) != 0)) {
+
+    /* "ssh/sftp_attributes.pyx":193
+ *     @property
+ *     def createtime_nseconds(self):
+ *         return self._attrs.createtime_nseconds \             # <<<<<<<<<<<<<<
+ *             if self._attrs is not NULL else None
+ * 
+ */
     __pyx_t_2 = __Pyx_PyInt_From_uint32_t(__pyx_v_self->_attrs->createtime_nseconds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 193, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = __pyx_t_2;
     __pyx_t_2 = 0;
   } else {
+
+    /* "ssh/sftp_attributes.pyx":194
+ *     def createtime_nseconds(self):
+ *         return self._attrs.createtime_nseconds \
+ *             if self._attrs is not NULL else None             # <<<<<<<<<<<<<<
+ * 
+ *     @createtime_nseconds.setter
+ */
     __Pyx_INCREF(Py_None);
     __pyx_t_1 = Py_None;
   }
@@ -3747,8 +3771,8 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_19createtime_n
  * 
  *     @property
  *     def createtime_nseconds(self):             # <<<<<<<<<<<<<<
- *         return self._attrs.createtime_nseconds if self._attrs is not NULL else None
- * 
+ *         return self._attrs.createtime_nseconds \
+ *             if self._attrs is not NULL else None
  */
 
   /* function exit code */
@@ -3763,7 +3787,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_19createtime_n
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":196
+/* "ssh/sftp_attributes.pyx":197
  * 
  *     @createtime_nseconds.setter
  *     def createtime_nseconds(self, uint32_t nseconds):             # <<<<<<<<<<<<<<
@@ -3779,7 +3803,7 @@ static int __pyx_pw_3ssh_15sftp_attributes_14SFTPAttributes_19createtime_nsecond
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_nseconds); {
-    __pyx_v_nseconds = __Pyx_PyInt_As_uint32_t(__pyx_arg_nseconds); if (unlikely((__pyx_v_nseconds == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L3_error)
+    __pyx_v_nseconds = __Pyx_PyInt_As_uint32_t(__pyx_arg_nseconds); if (unlikely((__pyx_v_nseconds == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 197, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -3799,7 +3823,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_19createtime_nsecond
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "ssh/sftp_attributes.pyx":197
+  /* "ssh/sftp_attributes.pyx":198
  *     @createtime_nseconds.setter
  *     def createtime_nseconds(self, uint32_t nseconds):
  *         self._attrs.createtime_nseconds = nseconds             # <<<<<<<<<<<<<<
@@ -3808,7 +3832,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_19createtime_nsecond
  */
   __pyx_v_self->_attrs->createtime_nseconds = __pyx_v_nseconds;
 
-  /* "ssh/sftp_attributes.pyx":196
+  /* "ssh/sftp_attributes.pyx":197
  * 
  *     @createtime_nseconds.setter
  *     def createtime_nseconds(self, uint32_t nseconds):             # <<<<<<<<<<<<<<
@@ -3822,7 +3846,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_19createtime_nsecond
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":200
+/* "ssh/sftp_attributes.pyx":201
  * 
  *     @property
  *     def mtime64(self):             # <<<<<<<<<<<<<<
@@ -3850,7 +3874,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_7mtime64___get
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "ssh/sftp_attributes.pyx":201
+  /* "ssh/sftp_attributes.pyx":202
  *     @property
  *     def mtime64(self):
  *         return self._attrs.mtime64 if self._attrs is not NULL else None             # <<<<<<<<<<<<<<
@@ -3859,7 +3883,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_7mtime64___get
  */
   __Pyx_XDECREF(__pyx_r);
   if (((__pyx_v_self->_attrs != NULL) != 0)) {
-    __pyx_t_2 = __Pyx_PyInt_From_uint64_t(__pyx_v_self->_attrs->mtime64); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 201, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_uint64_t(__pyx_v_self->_attrs->mtime64); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 202, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = __pyx_t_2;
     __pyx_t_2 = 0;
@@ -3871,7 +3895,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_7mtime64___get
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ssh/sftp_attributes.pyx":200
+  /* "ssh/sftp_attributes.pyx":201
  * 
  *     @property
  *     def mtime64(self):             # <<<<<<<<<<<<<<
@@ -3891,7 +3915,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_7mtime64___get
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":204
+/* "ssh/sftp_attributes.pyx":205
  * 
  *     @mtime64.setter
  *     def mtime64(self, uint64_t mtime):             # <<<<<<<<<<<<<<
@@ -3907,7 +3931,7 @@ static int __pyx_pw_3ssh_15sftp_attributes_14SFTPAttributes_7mtime64_3__set__(Py
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_mtime); {
-    __pyx_v_mtime = __Pyx_PyInt_As_uint64_t(__pyx_arg_mtime); if (unlikely((__pyx_v_mtime == ((uint64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 204, __pyx_L3_error)
+    __pyx_v_mtime = __Pyx_PyInt_As_uint64_t(__pyx_arg_mtime); if (unlikely((__pyx_v_mtime == ((uint64_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 205, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -3927,7 +3951,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_7mtime64_2__set__(st
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "ssh/sftp_attributes.pyx":205
+  /* "ssh/sftp_attributes.pyx":206
  *     @mtime64.setter
  *     def mtime64(self, uint64_t mtime):
  *         self._attrs.mtime64 = mtime             # <<<<<<<<<<<<<<
@@ -3936,7 +3960,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_7mtime64_2__set__(st
  */
   __pyx_v_self->_attrs->mtime64 = __pyx_v_mtime;
 
-  /* "ssh/sftp_attributes.pyx":204
+  /* "ssh/sftp_attributes.pyx":205
  * 
  *     @mtime64.setter
  *     def mtime64(self, uint64_t mtime):             # <<<<<<<<<<<<<<
@@ -3950,7 +3974,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_7mtime64_2__set__(st
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":208
+/* "ssh/sftp_attributes.pyx":209
  * 
  *     @property
  *     def mtime(self):             # <<<<<<<<<<<<<<
@@ -3978,7 +4002,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_5mtime___get__
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "ssh/sftp_attributes.pyx":209
+  /* "ssh/sftp_attributes.pyx":210
  *     @property
  *     def mtime(self):
  *         return self._attrs.mtime if self._attrs is not NULL else None             # <<<<<<<<<<<<<<
@@ -3987,7 +4011,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_5mtime___get__
  */
   __Pyx_XDECREF(__pyx_r);
   if (((__pyx_v_self->_attrs != NULL) != 0)) {
-    __pyx_t_2 = __Pyx_PyInt_From_uint32_t(__pyx_v_self->_attrs->mtime); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_uint32_t(__pyx_v_self->_attrs->mtime); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 210, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = __pyx_t_2;
     __pyx_t_2 = 0;
@@ -3999,7 +4023,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_5mtime___get__
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ssh/sftp_attributes.pyx":208
+  /* "ssh/sftp_attributes.pyx":209
  * 
  *     @property
  *     def mtime(self):             # <<<<<<<<<<<<<<
@@ -4019,7 +4043,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_5mtime___get__
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":212
+/* "ssh/sftp_attributes.pyx":213
  * 
  *     @mtime.setter
  *     def mtime(self, uint32_t mtime):             # <<<<<<<<<<<<<<
@@ -4035,7 +4059,7 @@ static int __pyx_pw_3ssh_15sftp_attributes_14SFTPAttributes_5mtime_3__set__(PyOb
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_mtime); {
-    __pyx_v_mtime = __Pyx_PyInt_As_uint32_t(__pyx_arg_mtime); if (unlikely((__pyx_v_mtime == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 212, __pyx_L3_error)
+    __pyx_v_mtime = __Pyx_PyInt_As_uint32_t(__pyx_arg_mtime); if (unlikely((__pyx_v_mtime == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 213, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4055,7 +4079,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_5mtime_2__set__(stru
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "ssh/sftp_attributes.pyx":213
+  /* "ssh/sftp_attributes.pyx":214
  *     @mtime.setter
  *     def mtime(self, uint32_t mtime):
  *         self._attrs.mtime = mtime             # <<<<<<<<<<<<<<
@@ -4064,7 +4088,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_5mtime_2__set__(stru
  */
   __pyx_v_self->_attrs->mtime = __pyx_v_mtime;
 
-  /* "ssh/sftp_attributes.pyx":212
+  /* "ssh/sftp_attributes.pyx":213
  * 
  *     @mtime.setter
  *     def mtime(self, uint32_t mtime):             # <<<<<<<<<<<<<<
@@ -4078,7 +4102,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_5mtime_2__set__(stru
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":216
+/* "ssh/sftp_attributes.pyx":217
  * 
  *     @property
  *     def mtime_nseconds(self):             # <<<<<<<<<<<<<<
@@ -4106,7 +4130,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14mtime_nsecon
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "ssh/sftp_attributes.pyx":217
+  /* "ssh/sftp_attributes.pyx":218
  *     @property
  *     def mtime_nseconds(self):
  *         return self._attrs.mtime_nseconds if self._attrs is not NULL else None             # <<<<<<<<<<<<<<
@@ -4115,7 +4139,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14mtime_nsecon
  */
   __Pyx_XDECREF(__pyx_r);
   if (((__pyx_v_self->_attrs != NULL) != 0)) {
-    __pyx_t_2 = __Pyx_PyInt_From_uint32_t(__pyx_v_self->_attrs->mtime_nseconds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_uint32_t(__pyx_v_self->_attrs->mtime_nseconds); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = __pyx_t_2;
     __pyx_t_2 = 0;
@@ -4127,7 +4151,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14mtime_nsecon
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ssh/sftp_attributes.pyx":216
+  /* "ssh/sftp_attributes.pyx":217
  * 
  *     @property
  *     def mtime_nseconds(self):             # <<<<<<<<<<<<<<
@@ -4147,7 +4171,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14mtime_nsecon
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":220
+/* "ssh/sftp_attributes.pyx":221
  * 
  *     @mtime_nseconds.setter
  *     def mtime_nseconds(self, uint32_t nseconds):             # <<<<<<<<<<<<<<
@@ -4163,7 +4187,7 @@ static int __pyx_pw_3ssh_15sftp_attributes_14SFTPAttributes_14mtime_nseconds_3__
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_nseconds); {
-    __pyx_v_nseconds = __Pyx_PyInt_As_uint32_t(__pyx_arg_nseconds); if (unlikely((__pyx_v_nseconds == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 220, __pyx_L3_error)
+    __pyx_v_nseconds = __Pyx_PyInt_As_uint32_t(__pyx_arg_nseconds); if (unlikely((__pyx_v_nseconds == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 221, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4183,7 +4207,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14mtime_nseconds_2__
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "ssh/sftp_attributes.pyx":221
+  /* "ssh/sftp_attributes.pyx":222
  *     @mtime_nseconds.setter
  *     def mtime_nseconds(self, uint32_t nseconds):
  *         self._attrs.mtime_nseconds = nseconds             # <<<<<<<<<<<<<<
@@ -4192,7 +4216,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14mtime_nseconds_2__
  */
   __pyx_v_self->_attrs->mtime_nseconds = __pyx_v_nseconds;
 
-  /* "ssh/sftp_attributes.pyx":220
+  /* "ssh/sftp_attributes.pyx":221
  * 
  *     @mtime_nseconds.setter
  *     def mtime_nseconds(self, uint32_t nseconds):             # <<<<<<<<<<<<<<
@@ -4206,7 +4230,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14mtime_nseconds_2__
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":224
+/* "ssh/sftp_attributes.pyx":225
  * 
  *     @property
  *     def acl(self):             # <<<<<<<<<<<<<<
@@ -4234,7 +4258,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_3acl___get__(s
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "ssh/sftp_attributes.pyx":225
+  /* "ssh/sftp_attributes.pyx":226
  *     @property
  *     def acl(self):
  *         if self._attrs is NULL:             # <<<<<<<<<<<<<<
@@ -4244,7 +4268,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_3acl___get__(s
   __pyx_t_1 = ((__pyx_v_self->_attrs == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "ssh/sftp_attributes.pyx":226
+    /* "ssh/sftp_attributes.pyx":227
  *     def acl(self):
  *         if self._attrs is NULL:
  *             return             # <<<<<<<<<<<<<<
@@ -4255,7 +4279,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_3acl___get__(s
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "ssh/sftp_attributes.pyx":225
+    /* "ssh/sftp_attributes.pyx":226
  *     @property
  *     def acl(self):
  *         if self._attrs is NULL:             # <<<<<<<<<<<<<<
@@ -4264,7 +4288,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_3acl___get__(s
  */
   }
 
-  /* "ssh/sftp_attributes.pyx":227
+  /* "ssh/sftp_attributes.pyx":228
  *         if self._attrs is NULL:
  *             return
  *         return ssh_string_to_bytes(self._attrs.acl)             # <<<<<<<<<<<<<<
@@ -4272,13 +4296,13 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_3acl___get__(s
  *     @property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __pyx_f_3ssh_5utils_ssh_string_to_bytes(__pyx_v_self->_attrs->acl); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_t_2 = __pyx_f_3ssh_5utils_ssh_string_to_bytes(__pyx_v_self->_attrs->acl); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "ssh/sftp_attributes.pyx":224
+  /* "ssh/sftp_attributes.pyx":225
  * 
  *     @property
  *     def acl(self):             # <<<<<<<<<<<<<<
@@ -4297,7 +4321,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_3acl___get__(s
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":230
+/* "ssh/sftp_attributes.pyx":231
  * 
  *     @property
  *     def extended_count(self):             # <<<<<<<<<<<<<<
@@ -4325,7 +4349,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14extended_cou
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "ssh/sftp_attributes.pyx":231
+  /* "ssh/sftp_attributes.pyx":232
  *     @property
  *     def extended_count(self):
  *         return self._attrs.extended_count if self._attrs is not NULL else None             # <<<<<<<<<<<<<<
@@ -4334,7 +4358,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14extended_cou
  */
   __Pyx_XDECREF(__pyx_r);
   if (((__pyx_v_self->_attrs != NULL) != 0)) {
-    __pyx_t_2 = __Pyx_PyInt_From_uint32_t(__pyx_v_self->_attrs->extended_count); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 231, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_uint32_t(__pyx_v_self->_attrs->extended_count); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_1 = __pyx_t_2;
     __pyx_t_2 = 0;
@@ -4346,7 +4370,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14extended_cou
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "ssh/sftp_attributes.pyx":230
+  /* "ssh/sftp_attributes.pyx":231
  * 
  *     @property
  *     def extended_count(self):             # <<<<<<<<<<<<<<
@@ -4366,7 +4390,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14extended_cou
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":234
+/* "ssh/sftp_attributes.pyx":235
  * 
  *     @extended_count.setter
  *     def extended_count(self, uint32_t count):             # <<<<<<<<<<<<<<
@@ -4382,7 +4406,7 @@ static int __pyx_pw_3ssh_15sftp_attributes_14SFTPAttributes_14extended_count_3__
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__ (wrapper)", 0);
   assert(__pyx_arg_count); {
-    __pyx_v_count = __Pyx_PyInt_As_uint32_t(__pyx_arg_count); if (unlikely((__pyx_v_count == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 234, __pyx_L3_error)
+    __pyx_v_count = __Pyx_PyInt_As_uint32_t(__pyx_arg_count); if (unlikely((__pyx_v_count == ((uint32_t)-1)) && PyErr_Occurred())) __PYX_ERR(0, 235, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4402,7 +4426,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14extended_count_2__
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__set__", 0);
 
-  /* "ssh/sftp_attributes.pyx":235
+  /* "ssh/sftp_attributes.pyx":236
  *     @extended_count.setter
  *     def extended_count(self, uint32_t count):
  *         self._attrs.extended_count = count             # <<<<<<<<<<<<<<
@@ -4411,7 +4435,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14extended_count_2__
  */
   __pyx_v_self->_attrs->extended_count = __pyx_v_count;
 
-  /* "ssh/sftp_attributes.pyx":234
+  /* "ssh/sftp_attributes.pyx":235
  * 
  *     @extended_count.setter
  *     def extended_count(self, uint32_t count):             # <<<<<<<<<<<<<<
@@ -4425,7 +4449,7 @@ static int __pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_14extended_count_2__
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":238
+/* "ssh/sftp_attributes.pyx":239
  * 
  *     @property
  *     def extended_type(self):             # <<<<<<<<<<<<<<
@@ -4453,7 +4477,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_typ
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "ssh/sftp_attributes.pyx":239
+  /* "ssh/sftp_attributes.pyx":240
  *     @property
  *     def extended_type(self):
  *         if self._attrs is NULL:             # <<<<<<<<<<<<<<
@@ -4463,7 +4487,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_typ
   __pyx_t_1 = ((__pyx_v_self->_attrs == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "ssh/sftp_attributes.pyx":240
+    /* "ssh/sftp_attributes.pyx":241
  *     def extended_type(self):
  *         if self._attrs is NULL:
  *             return             # <<<<<<<<<<<<<<
@@ -4474,7 +4498,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_typ
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "ssh/sftp_attributes.pyx":239
+    /* "ssh/sftp_attributes.pyx":240
  *     @property
  *     def extended_type(self):
  *         if self._attrs is NULL:             # <<<<<<<<<<<<<<
@@ -4483,7 +4507,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_typ
  */
   }
 
-  /* "ssh/sftp_attributes.pyx":241
+  /* "ssh/sftp_attributes.pyx":242
  *         if self._attrs is NULL:
  *             return
  *         return ssh_string_to_bytes(self._attrs.extended_type)             # <<<<<<<<<<<<<<
@@ -4491,13 +4515,13 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_typ
  *     @property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __pyx_f_3ssh_5utils_ssh_string_to_bytes(__pyx_v_self->_attrs->extended_type); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 241, __pyx_L1_error)
+  __pyx_t_2 = __pyx_f_3ssh_5utils_ssh_string_to_bytes(__pyx_v_self->_attrs->extended_type); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "ssh/sftp_attributes.pyx":238
+  /* "ssh/sftp_attributes.pyx":239
  * 
  *     @property
  *     def extended_type(self):             # <<<<<<<<<<<<<<
@@ -4516,7 +4540,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_typ
   return __pyx_r;
 }
 
-/* "ssh/sftp_attributes.pyx":244
+/* "ssh/sftp_attributes.pyx":245
  * 
  *     @property
  *     def extended_data(self):             # <<<<<<<<<<<<<<
@@ -4544,7 +4568,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_dat
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("__get__", 0);
 
-  /* "ssh/sftp_attributes.pyx":245
+  /* "ssh/sftp_attributes.pyx":246
  *     @property
  *     def extended_data(self):
  *         if self._attrs is NULL:             # <<<<<<<<<<<<<<
@@ -4554,7 +4578,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_dat
   __pyx_t_1 = ((__pyx_v_self->_attrs == NULL) != 0);
   if (__pyx_t_1) {
 
-    /* "ssh/sftp_attributes.pyx":246
+    /* "ssh/sftp_attributes.pyx":247
  *     def extended_data(self):
  *         if self._attrs is NULL:
  *             return             # <<<<<<<<<<<<<<
@@ -4564,7 +4588,7 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_dat
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "ssh/sftp_attributes.pyx":245
+    /* "ssh/sftp_attributes.pyx":246
  *     @property
  *     def extended_data(self):
  *         if self._attrs is NULL:             # <<<<<<<<<<<<<<
@@ -4573,19 +4597,19 @@ static PyObject *__pyx_pf_3ssh_15sftp_attributes_14SFTPAttributes_13extended_dat
  */
   }
 
-  /* "ssh/sftp_attributes.pyx":247
+  /* "ssh/sftp_attributes.pyx":248
  *         if self._attrs is NULL:
  *             return
  *         return ssh_string_to_bytes(self._attrs.extended_data)             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __pyx_f_3ssh_5utils_ssh_string_to_bytes(__pyx_v_self->_attrs->extended_data); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_2 = __pyx_f_3ssh_5utils_ssh_string_to_bytes(__pyx_v_self->_attrs->extended_data); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "ssh/sftp_attributes.pyx":244
+  /* "ssh/sftp_attributes.pyx":245
  * 
  *     @property
  *     def extended_data(self):             # <<<<<<<<<<<<<<

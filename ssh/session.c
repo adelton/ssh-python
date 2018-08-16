@@ -12239,7 +12239,7 @@ if (!__Pyx_RefNanny) {
  * 
  * from exceptions import OptionError, InvalidAPIUse             # <<<<<<<<<<<<<<
  * 
- * cimport c_ssh
+ * from c_sftp cimport sftp_session, sftp_new, sftp_init
  */
   __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 30, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);

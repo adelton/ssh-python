@@ -23,8 +23,8 @@ from sftp_statvfs cimport SFTPStatVFS
 from utils cimport handle_ssh_error_codes, to_bytes
 from .exceptions import SFTPError, SFTPHandleError
 
-cimport c_sftp
 from c_ssh cimport ssh_get_error, ssh_get_error_code, timeval
+cimport c_sftp
 
 
 cdef class SFTP:

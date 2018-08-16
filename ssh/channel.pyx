@@ -97,7 +97,8 @@ cdef class Channel:
             rc = c_ssh.ssh_channel_open_auth_agent(self._channel)
         return handle_ok_error_codes(rc)
 
-    def open_forward(self, remotehost, int remoteport, sourcehost, int sourceport):
+    def open_forward(self, remotehost, int remoteport,
+                     sourcehost, int sourceport):
         cdef bytes b_remotehost = to_bytes(remotehost)
         cdef const_char *c_remotehost = b_remotehost
         cdef bytes b_sourcehost = to_bytes(sourcehost)
@@ -105,7 +106,8 @@ cdef class Channel:
         cdef int rc
         with nogil:
             rc = c_ssh.ssh_channel_open_forward(
-                self._channel, c_remotehost, remoteport, c_sourcehost, sourceport)
+                self._channel, c_remotehost, remoteport,
+                c_sourcehost, sourceport)
         return handle_ok_error_codes(rc)
 
     def open_session(self):
@@ -163,7 +165,8 @@ cdef class Channel:
             free(cbuf)
         return handle_ok_error_codes(rc), buf
 
-    def read_nonblocking(self, c_ssh.uint32_t size=1024*1024, bint is_stderr=False):
+    def read_nonblocking(self, c_ssh.uint32_t size=1024*1024,
+                         bint is_stderr=False):
         cdef int rc
         cdef bytes buf = b''
         cdef char* cbuf

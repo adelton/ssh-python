@@ -19,9 +19,8 @@ from cpython cimport PyObject_AsFileDescriptor
 from channel cimport Channel
 from session cimport Session
 
-cimport c_ssh
-
 from utils cimport handle_ssh_error_codes
+cimport c_ssh
 
 
 cdef class Flag:

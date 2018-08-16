@@ -29,8 +29,8 @@ from scp cimport SCP
 
 from exceptions import OptionError, InvalidAPIUse
 
-cimport c_ssh
 from c_sftp cimport sftp_session, sftp_new, sftp_init
+cimport c_ssh
 
 
 # SSH status flags
