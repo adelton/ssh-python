@@ -1336,7 +1336,7 @@ static int __pyx_pf_3ssh_3scp_3SCP___cinit__(struct __pyx_obj_3ssh_3scp_SCP *__p
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
  *         if self._scp is not NULL:
- *             c_ssh.ssh_scp_free(self._scp)
+ *             if not self.closed:
  */
 
 /* Python wrapper */
@@ -1360,8 +1360,8 @@ static void __pyx_pf_3ssh_3scp_3SCP_2__dealloc__(struct __pyx_obj_3ssh_3scp_SCP 
  * 
  *     def __dealloc__(self):
  *         if self._scp is not NULL:             # <<<<<<<<<<<<<<
- *             c_ssh.ssh_scp_free(self._scp)
- *             self._scp = NULL
+ *             if not self.closed:
+ *                 self.close()
  */
   __pyx_t_1 = ((__pyx_v_self->_scp != NULL) != 0);
   if (__pyx_t_1) {
@@ -1369,57 +1369,57 @@ static void __pyx_pf_3ssh_3scp_3SCP_2__dealloc__(struct __pyx_obj_3ssh_3scp_SCP 
     /* "ssh/scp.pyx":45
  *     def __dealloc__(self):
  *         if self._scp is not NULL:
- *             c_ssh.ssh_scp_free(self._scp)             # <<<<<<<<<<<<<<
- *             self._scp = NULL
- *             if not self.closed:
- */
-    ssh_scp_free(__pyx_v_self->_scp);
-
-    /* "ssh/scp.pyx":46
- *         if self._scp is not NULL:
- *             c_ssh.ssh_scp_free(self._scp)
- *             self._scp = NULL             # <<<<<<<<<<<<<<
- *             if not self.closed:
- *                 self.close()
- */
-    __pyx_v_self->_scp = NULL;
-
-    /* "ssh/scp.pyx":47
- *             c_ssh.ssh_scp_free(self._scp)
- *             self._scp = NULL
  *             if not self.closed:             # <<<<<<<<<<<<<<
  *                 self.close()
- * 
+ *             c_ssh.ssh_scp_free(self._scp)
  */
     __pyx_t_1 = ((!(__pyx_v_self->closed != 0)) != 0);
     if (__pyx_t_1) {
 
-      /* "ssh/scp.pyx":48
- *             self._scp = NULL
+      /* "ssh/scp.pyx":46
+ *         if self._scp is not NULL:
  *             if not self.closed:
  *                 self.close()             # <<<<<<<<<<<<<<
- * 
- *     @staticmethod
+ *             c_ssh.ssh_scp_free(self._scp)
+ *             self._scp = NULL
  */
-      __pyx_t_2 = ((struct __pyx_vtabstruct_3ssh_3scp_SCP *)__pyx_v_self->__pyx_vtab)->close(__pyx_v_self, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
+      __pyx_t_2 = ((struct __pyx_vtabstruct_3ssh_3scp_SCP *)__pyx_v_self->__pyx_vtab)->close(__pyx_v_self, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 46, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "ssh/scp.pyx":47
- *             c_ssh.ssh_scp_free(self._scp)
- *             self._scp = NULL
+      /* "ssh/scp.pyx":45
+ *     def __dealloc__(self):
+ *         if self._scp is not NULL:
  *             if not self.closed:             # <<<<<<<<<<<<<<
  *                 self.close()
- * 
+ *             c_ssh.ssh_scp_free(self._scp)
  */
     }
+
+    /* "ssh/scp.pyx":47
+ *             if not self.closed:
+ *                 self.close()
+ *             c_ssh.ssh_scp_free(self._scp)             # <<<<<<<<<<<<<<
+ *             self._scp = NULL
+ * 
+ */
+    ssh_scp_free(__pyx_v_self->_scp);
+
+    /* "ssh/scp.pyx":48
+ *                 self.close()
+ *             c_ssh.ssh_scp_free(self._scp)
+ *             self._scp = NULL             # <<<<<<<<<<<<<<
+ * 
+ *     @staticmethod
+ */
+    __pyx_v_self->_scp = NULL;
 
     /* "ssh/scp.pyx":44
  * 
  *     def __dealloc__(self):
  *         if self._scp is not NULL:             # <<<<<<<<<<<<<<
- *             c_ssh.ssh_scp_free(self._scp)
- *             self._scp = NULL
+ *             if not self.closed:
+ *                 self.close()
  */
   }
 
@@ -1428,7 +1428,7 @@ static void __pyx_pf_3ssh_3scp_3SCP_2__dealloc__(struct __pyx_obj_3ssh_3scp_SCP 
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
  *         if self._scp is not NULL:
- *             c_ssh.ssh_scp_free(self._scp)
+ *             if not self.closed:
  */
 
   /* function exit code */

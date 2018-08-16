@@ -2,6 +2,7 @@ from subprocess import check_call
 import os
 from glob import glob
 from shutil import copy2
+from multiprocessing import cpu_count
 
 
 def build_ssh():
@@ -14,7 +15,7 @@ def build_ssh():
     os.chdir('src')
     check_call('cmake -DCMAKE_BUILD_TYPE=Release ../libssh',
                shell=True, env=os.environ)
-    check_call(['make', '-j6'])
+    check_call(['make', '-j%s' % (cpu_count(),)])
     os.chdir('..')
 
     for src in glob('src/src/libssh.so*'):

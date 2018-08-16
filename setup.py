@@ -2,7 +2,6 @@ import platform
 import os
 import sys
 from glob import glob
-# from multiprocessing import cpu_count
 from _setup_libssh import build_ssh
 
 import versioneer

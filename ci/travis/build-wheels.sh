@@ -12,6 +12,6 @@ done
 
 # Install packages and test
 for PYBIN in `ls -1d /opt/python/*/bin | grep -v cpython`; do
-    "${PYBIN}/pip" install ssh2-python --no-index -f /io/wheelhouse
+    "${PYBIN}/pip" install ssh-python --no-index -f /io/wheelhouse
     (cd "$HOME"; "${PYBIN}/python" -c 'from ssh.session import Session; Session()')
 done
