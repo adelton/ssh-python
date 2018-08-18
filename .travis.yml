@@ -27,27 +27,27 @@ script:
   - python setup.py sdist
   - cd dist; pip install *; cd ..
   - cd doc; make html; cd ..
-jobs:
-  include:
-    - stage: build wheels
-      os: linux
-      python: 3.6
-      install:
-        - pip install twine
-      script:
-        - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-        - ./ci/travis/build-manylinux.sh
-      after_success:
-        - if [[ ! -z "$TRAVIS_TAG" ]]; then
-              twine upload --skip-existing -u $PYPI_U -p $PYPI_P wheelhouse/*.whl;
-          fi
-      deploy:
-        - provider: pypi
-          skip_cleanup: true
-          on:
-            repo: ParallelSSH/ssh-python
-            tags: true
-          distributions: sdist
-          user: pkittenis
-          password:
-            secure: ""
+# jobs:
+#   include:
+#     - stage: build wheels
+#       os: linux
+#       python: 3.6
+#       install:
+#         - pip install twine
+#       script:
+#         - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+#         - ./ci/travis/build-manylinux.sh
+#       after_success:
+#         - if [[ ! -z "$TRAVIS_TAG" ]]; then
+#               twine upload --skip-existing -u $PYPI_U -p $PYPI_P wheelhouse/*.whl;
+#           fi
+#       deploy:
+#         - provider: pypi
+#           skip_cleanup: true
+#           on:
+#             repo: ParallelSSH/ssh-python
+#             tags: true
+#           distributions: sdist
+#           user: pkittenis
+#           password:
+#             secure: ""
