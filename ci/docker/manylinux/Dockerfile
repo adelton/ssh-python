@@ -10,7 +10,6 @@ RUN yum install zlib-devel -y
 ADD ${CMAKE}.rpm cmake.rpm
 RUN rpm -i cmake.rpm
 
-# ADD https://github.com/ParallelSSH/libssh2/archive/${LIBSSH2_VER}.tar.gz libssh2.tar.gz
 ADD libssh-${LIBSSH}.tar.gz libssh.tar.gz
 ADD ${OPENSSL}.tar.gz ${OPENSSL}.tar.gz
 
