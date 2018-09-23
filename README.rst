@@ -9,6 +9,13 @@ Bindings for libssh_ C library.
 .. image:: https://img.shields.io/pypi/v/ssh-python.svg
    :target: https://pypi.python.org/pypi/ssh-python
    :alt: Latest Version
+.. image:: https://travis-ci.org/ParallelSSH/ssh-python.svg?branch=master
+   :target: https://travis-ci.org/ParallelSSH/ssh-python
+.. image:: https://img.shields.io/pypi/wheel/ssh-python.svg
+   :target: https://pypi.python.org/pypi/ssh-python
+.. image:: https://img.shields.io/pypi/pyversions/ssh-python.svg
+   :target: https://pypi.python.org/pypi/ssh-python
+
 
 Installation
 _____________
